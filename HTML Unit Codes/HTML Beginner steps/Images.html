@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Images</title>
+
+    <!--Add a background-image on the element of p-->
+    <style>
+        body
+        {
+            background-image: url('tiago-chaves.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<body>
+    <!--HTML Images-->
+    <!--<img src="Steve.jpg" alt="Steve image"
+    The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, 
+    or if the user uses a screen reader).-->
+
+    <!--HTML Image Maps-->
+    <!--The HTML <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined 
+        with one or more <area> tags.-->
+
+    <h1 style="color: white;">Image Maps</h1>    
+    <p style="color: #fff;">Click on the computer to go the new page and read more abaout the topic</p>
+    <!--The usemap value starts with a hash tag # followed by the name of the image map, and is used to create a relationship 
+    between the image and the image map.-->
+
+    <!-- <img src="katie-mukhina.jpg" alt="workplace" usemap="#workmap">
+        
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.html">
+        </map>-->
+     
+
+        <!--Shape
+You must define the shape of the clickable area, and you can choose one of these values:
+
+rect - defines a rectangular region
+circle - defines a circular region
+poly - defines a polygonal region
+default - defines the entire region-->
+
+<!--HTML Background Images-->
+<!--Background Image on an HTML element
+To add a background image on an HTML element, use the HTML style attribute and the CSS background-image property:-->
+
+<!--HTML <PICTURE> Element-->
+    <!--The HTML <picture> element gives web developers more flexibility in specifying image resources.
+The <picture> element contains one or more <source> elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view and/or device.
+Each <source> element has a media attribute that defines when the image is the most suitable.-->
+
+<!--For example:
+Show different images for different screen sizes:-->
+
+<picture>
+    <source media="(min-width: 650px)" srcset="img_food.jpg">
+    <source media="(min-width: 450px)" srcset="img_car.jpg">
+    <img src="tiago-chaves.jpg">
+</picture>
+
+<!--HTML Image Tags summary
+Tag	Description
+<img>	Defines an image
+<map>	Defines an image map
+<area>	Defines a clickable area inside an image map
+<picture>	Defines a container for multiple image resources-->
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+</head>
+
+<!--Then style our table-->
+<style>
+    table 
+    {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th 
+    {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) 
+    {
+        background-color: #dddddd;
+    }
+
+</style>
+<body>
+
+    <!--HTML Tables
+    HTML tables allow web developers to arrange data into rows and columns.-->
+    
+    <h2>HTML Tables</h2>
+
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro commercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexicon</td>
+        </tr>
+        <tr>
+            <td>Ernest Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzinii Alimentari Riuniti</td>
+            <td>Giovanni Roveli</td>
+            <td>Italy</td>
+        </tr>
+
+    </table>
+
+<!--Table Cells
+Each table cell is defined by a <td> and a </td> tag.
+while td=table data, th=table head & tr=table row-->
+
+<!--Example
+<table>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+</table>-->
+
+<!--<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>TD elements define table cells</h2>
+
+<table style="width:100%">
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+</table>
+
+<p>To understand the example better, we have added borders to the table.</p>-->
+
+<!--HTML Table Tags
+Tag	Description
+<table>	Defines a table
+<th>	Defines a header cell in a table
+<tr>	Defines a row in a table
+<td>	Defines a cell in a table
+<caption>	Defines a table caption
+<colgroup>	Specifies a group of one or more columns in a table for formatting
+<col>	Specifies column properties for each column within a <colgroup> element
+<thead>	Groups the header content in a table
+<tbody>	Groups the body content in a table
+<tfoot>	Groups the footer content in a table-->
+
+
+    <!--HTML Table Borders
+    HTML tables can have borders of different styles and shapes.
+    How To Add a Border
+To add a border, use the CSS border property on table, th, and td elements:
+Example
+table, th, td {
+  border: 1px solid black;
+  
+  
+  Collapsed Table Borders
+To avoid having double borders like in the example above, set the CSS border-collapse property to collapse.
+
+This will make the borders collapse into a single border:
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+  
+Style Table Borders
+If you set a background color of each cell, and give the border a white color 
+(the same as the document background), you get the impression of an invisible border:
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+  
+Round Table Borders
+With the border-radius property, the borders get rounded corners:
+
+table, th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+  
+Skip the border around the table by leaving out table from the css selector:
+th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+  
+Dotted Table Borders
+With the border-style property, you can set the appearance of the border.
+
+
+The following values are allowed:
+
+dotted     
+dashed     
+solid     
+double     
+groove     
+ridge     
+inset     
+outset     
+none     
+hidden
+
+ th, td {
+  border-style: dotted;
+}
+  
+Border Color
+With the border-color property, you can set the color of the border.
+
+ th, td {
+  border-color: #96D4D4;
+}
+  
+HTML Table Sizes
+HTML tables can have different sizes for each column, row or the entire table.
+
+Use the style attribute with the width or height properties to specify the size of a table, row or column.
+HTML Table Width
+To set the width of a table, add the style attribute to the <table> element:
+
+Example
+Set the width of the table to 100%:
+
+<table style="width:100%">
+
+    <style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+HTML Table Column Width
+To set the size of a specific column, add the style attribute on a <th> or <td> element:
+    <table style="width:100%">
+  <tr>
+    <th style="width:70%">Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+HTML Table Row Height
+To set the height of a specific row, add the style attribute on a table row element:
+Example
+Set the height of the second row to 200 pixels:
+
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr style="height:200px">
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+
+-->
+
+
+
+
+
+</body>
+</html>

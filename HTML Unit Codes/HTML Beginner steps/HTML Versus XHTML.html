@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Versus XHTML</title>
+</head>
+<body>
+    <h1>HTML Versus XHTML</h1>
+    <p>XHTML is a stricter, more XML-based version of HTML.</p>
+    <p>What is XHTML?
+XHTML stands for EXtensible HyperText Markup Language
+XHTML is a stricter, more XML-based version of HTML
+XHTML is HTML defined as an XML application
+XHTML is supported by all major browsers</p>
+
+        <h1>Why XHTML?</h1>
+        <p>XML is a markup language where all documents must be marked up correctly (be "well-formed").
+
+XHTML was developed to make HTML more extensible and flexible to work with other data formats (such as XML). In addition, browsers ignore errors in HTML pages, and try to display the website even if it has some errors in the markup. So XHTML comes with a much stricter error handling.</p>
+
+            <h2>The Most Important Differences from HTML</h2>
+            <ul>
+                <li> !DOCTYPE with open and closed tags is mandatory</li>
+                <li>The xmlns attribute in <html> is mandatory</li>
+                <li>html, head, title, and body are mandoatory with open and closd tags.</li>
+                <li>Elements must always be properly nested</li>
+                <li>Elements must always be closed</li>
+                <li>Elements must always be in lowercase</li>
+                <li>Attribute names must always be in lowercase</li>
+                <li>Attribute values must always be quoted</li>
+                <li>Attribute minimization is forbidden</li>
+            </ul>
+
+            <!--XHTML - <!DOCTYPE ....> Is Mandatory
+            
+            An XHTML document must have an XHTML <!DOCTYPE> declaration.
+The <html>, <head>, <title>, and <body> elements must also be present, and the xmlns attribute in <html> must specify the xml namespace for the document.
+Example: Here is an XHTML document with a minimum of required tags: -->
+
+    <img src="HTML vs XHTML/XHTML with mininum required tags.png" alt="XHTML with minimum required tags" style="width: 100%; height: 100%;">
+
+    <h2>XHTML Elements Must be Properly Nested</h2>
+    <p>In XHTML, elements must always be properly nested within each other, like this:</p>
+
+    <!--Example:-->
+    <b><i>Some text</i></b>
+
+    <h2>XHTML Elements Must Always be Closed</h2>
+    <p>In XHTML, elements must always be closed, like this:</p>
+    <!--Example:-->
+    <p>This is a paragraph.</p>
+
+    <h2>XHTML Empty Elements Must Always be Closed</h2>
+    <p>In XHTML, empty elements must always be closed, like this:</p>
+
+    <!--Example:-->
+    A break: <br />
+    A horizontal rule: <hr />
+    An image: <img src="happy.gif" alt="Happy face" />
+    <br />
+
+    <!--XHTML Elements Must be in Lowercase
+In XHTML, element names must always be in lowercase, like this:
+<body>
+<p>This is a paragraph</p>
+</body>-->
+
+<!--XHTML Attribute Names Must be in Lowercase
+In XHTML, attribute names must always be in lowercase, like this:
+Correct:
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>-->
+
+<!--XHTML Attribute Values Must be Quoted
+In XHTML, attribute values must always be quoted, like this:
+Correct:
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>-->
+
+<!--XHTML Attribute Minimization is Forbidden
+In XHTML, attribute minimization is forbidden:
+Correct order is-->
+
+<input type="checkbox" name="vehicle" value="car" checked="checked" />
+<input type="text" name="lastname" disabled="disabled" />
+
+    <h1>Validate HTML With The W3C Validator</h1>
+    <!--example-->
+
+    <img src="HTML vs XHTML/Validating HMTL.png" alt="Validating HTML" style="width: 100%; height: 100%;">
+
+</body>
+</html>

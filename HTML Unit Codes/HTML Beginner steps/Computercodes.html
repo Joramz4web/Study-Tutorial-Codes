@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Computer Code Elements</title>
+</head>
+<body>
+
+    <h1>HTML Computer Code Elements</h1>
+    <!--HTML contains several elements for defining user input and computer code.
+    Example:-->
+
+    <h2>Computer Code</h2>
+    <p>Some programming code.</p>
+
+    <code>
+        x = 5;
+        y = 6;
+        z = x + y;
+    </code>
+
+    <h1>HTML <kbd> For Keyboard Input</h1>
+
+        <!--The HTML <kbd> element is used to define keyboard input. The content inside is displayed in the browser's default monospace font.-->
+
+        <!--Example
+Define some text as keyboard input in a document:-->
+
+        <h2>The kbd Element </h2>
+        <p>The kbd element is used to define keyboard input: </p>
+
+        <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+
+        <h1>HTML <samp> For Program Output</h1>
+        <!--The HTML <samp> element is used to define sample output from a computer program. The content inside is displayed in the browser's default monospace font.
+            
+            Example
+Define some text as sample output from a computer program in a document:-->
+
+            <p>Message from my computer: </p>
+            <p><samp>File not found.</samp>Press F1 to continue</p>
+
+        <h1> Preserve Line-Breaks</h1>
+        <!--Notice that the <code> element does NOT preserve extra whitespace and line-breaks.
+
+To preserve extra whitespace and line-breaks, you can put the <code> element inside a <pre> element:-->
+
+    <p>The code element does not preserve whitespace and line-breaks.</p>
+
+    <p>To fix this, you can put the code element inside a pre element:</p>
+
+    <pre>
+        <code>
+            x = 5;
+            y = 6;
+            z = x + y;
+        </code>
+    </pre>
+
+    <h1>HTML <var> For Variables</h1>
+        <!--The HTML <var> element  is used to define a variable in programming or in a mathematical expression. The content inside is typically displayed in italic.
+            
+        Example
+Define some text as variables in a document:-->
+
+        <p>The area of a triangle is: 1/2 x <var>b</var>x<var>h</var>, where <var>b</var>is the base, and <var>h</var> is the vertical height.</p>
+
+        <!--Result:
+
+The area of a triangle is: 1/2 x b x h, where b is the base, and h is the vertical height.-->
+
+<!--Chapter Summary
+The <kbd> element defines keyboard input
+The <samp> element defines sample output from a computer program
+The <code> element defines a piece of computer code
+The <var> element defines a variable in programming or in a mathematical expression
+The <pre> element defines preformatted text-->
+
+
+
+
+</body>
+</html>
