@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Audio</title>
+</head>
+<body>
+    <h1>HTML Audio</h1>
+
+    <!--The HTML <audio> element is used to play an audio file on a web page.-->
+
+        <h2>The HTML - audio Element</h2>
+        <p>To play an audio file in HTML, use the audio element:</p>
+
+        <audio controls>
+            <source src="HTML Audio/Popcaan, Imeru Tafari - Elevate.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h2>HTML Audio - How It Works</h2>
+
+        <!--The controls attribute adds audio controls, like play, pause, and volume.
+    The <source> element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+
+    The text between the <audio> and </audio> tags will only be displayed in browsers that do not support the <audio> element.-->
+
+        <h2>HTML-audio Autoplay</h2>
+        <p>To start an audio file automatically, use the autoplay attribute:</p>
+
+         <audio controls autoplay>
+            <source src="HTML Audio/Popcaan, Imeru Tafari - Elevate.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!--Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.-->
+
+        <h2>Add muted after autoplay to let your audio file start playing automatically (but muted):</h2>
+
+        <!-- <audio controls autoplay muted>
+            <source src="HTML Audio/Popcaan, Imeru Tafari - Elevate.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>-->
+
+        <h2>Browser Support</h2>
+        <img src="HTML Audio/Supported browsers.png" alt="Browser support for HTML audio" style="width: 100%; height: 100%;">
+
+        <h2>HTML Audio Formats</h2> <!--*From Edge 79-->
+        <p>There are three supported audio formats: MP3, WAV, and OGG. The browser support for the different formats is: </p>
+
+        <img src="HTML Audio/Audio formats.png" alt="Audio formats" style="width: 100%; height: 100%;">
+
+        <h2>HTML Audio - Media Types</h2>
+        <img src="HTML Audio/audio-media types.png" alt="Media types" style="width: 100%; height: 100%;">
+
+        <h2>HTML Audio - Methods, Properties, and Events</h2>
+    <p>The HTML DOM defines methods, properties, and events for the audio element. This allows you to load, play, and pause audios, as well as set duration and volume.
+
+    There are also DOM events that can notify you when an audio begins to play, is paused, etc. For a full DOM reference, go to our HTML Audio/Video DOM Reference. </p>
+
+       <h2>HTML Audio Tags</h2>
+       <img src="HTML Audio/audio tags.png" alt="Audio tags" style="width: 100%; height: 100%;">
+
+
+</body>
+</html>
