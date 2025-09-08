@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS @supports Rule</title>
+</head>
+<body>
+    <h1>CSS @supports Rule</h1>
+    <p>The @supports rule lets you check if the browser supports a specific CSS property or value, and to define fallback styles if the feature is not supported.</p>
+
+    <p>This is useful for applying styles only when the browser can handle them.</p>
+    <pre>
+        Basic Syntax
+    @supports (property: value) {
+    /* CSS rules */
+    }
+</pre>
+
+    <h2>Example: Using @supports with grid and flex</h2>
+    <p>You can combine @supports with regular CSS to provide fallback styling.</p>
+
+    <p>Here, if the browser supports display: flex, the CSS inside the @supports rule will be applied. If not, the .container class outside the @supports rule will be applied:</p>
+
+    <!--<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  float: left;
+  width: 100%;
+}
+
+@supports (display: flex) {
+  .container {
+    display: flex;
+    background-color: DodgerBlue;
+  }
+}
+
+.container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>The @supports Rule</h1>
+
+<p>If the browser supports display: flex, the CSS inside the @supports rule will be applied. If not, the .container class outside the @supports rule will be applied:</p>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+</body>
+</html>
+
+Here, if the browser supports display: grid, the CSS inside the @supports rule will be applied. If not, the .container class outside the @supports rule will be applied:-->
+
+<!--Example 2
+/* use this CSS if the browser does not support display: grid */
+.container {
+  display: table;
+  width: 90%;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+/* use this CSS if the browser supports display: grid */
+@supports (display: grid) {
+  .container {
+    display: grid;
+    grid: auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+}-->
+
+    <h2>Negating with not</h2>
+    <p>You can use not to apply styles only when a feature is not supported:</p>
+
+    <!--Example
+@supports not (display: grid) {
+  .warning {
+    background-color: pink;
+    padding: 10px;
+    border: 1px solid red;
+  }
+}-->
+
+    <h2>Combining Conditions</h2>
+    <!--Example
+@supports (display: grid) and (gap: 10px) {
+  .container {
+    display: grid;
+    gap: 10px;
+  }
+}
+  
+Note: Always provide fallback styles outside of @supports, for older browsers.-->
+
+<p>CSS Reference</p>
+<!--At-rule	Description
+@supports	Used to test whether a browser supports a CSS feature-->
+
+
+</body>
+</html>

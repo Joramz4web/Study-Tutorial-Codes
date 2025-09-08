@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: dodgerblue;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+</style>
+
+</head>
+<body>
+    <h1>CSS Grid Lines</h1>
+
+    <p>The lines between columns are called column lines.</p>
+    <p>The lines between rows are called row lines.
+        We can specify where to start and end a grid item by using the following properties:
+        <ul>
+            <li>grid-column-start</li>
+            <li>grid-column-end</li>
+            <li>grid-row-start</li>
+            <li>grid-row-end</li>
+            <li>grid-column</li>
+            <li>grid-row</li>
+        </ul>
+    </p>
+<p>You can refer to line numbers when placing a grid item in a grid container.</p>
+
+    <h2>CSS grid-column-start and grid-column-end</h2>
+    <pre>
+        The grid-column-start property specifies where to start a grid item.
+        The grid-column-end property specifies where to end a grid item.
+    </pre>
+
+<h1>The grid-column-start and grid-column-end Properties</h1>
+
+<p>The <em>grid-column-start</em> property specifies where to start a grid item. The <em>grid-column-end</em> property specifies where to end a grid item.</p>
+
+<p>Place the first grid item at column-line 1, and let it end on column-line 3:</p>
+
+<div class="grid-container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>  
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>  
+</div>
+
+    <h2>The CSS grid-column Property</h2>
+    
+    <p>The grid-column property is a shorthand property for the grid-column-start and the grid-column-end properties.</p>
+
+    <!--Example
+Place the first grid item at column-line 1, and let it span 2 columns:
+
+.item1 {
+  grid-column: 1 / span 2;
+}-->
+
+    <h2>CSS grid-row-start and grid-row-end</h2>
+    <pre>
+        The grid-row-start property specifies where to start a grid item.
+        The grid-row-end property specifies where to end a grid item. 
+    </pre>
+
+    <!--Example
+Place the first grid item at row line 1, and let it end on row line 3:
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}-->
+
+    <h1>The CSS grid-row Property</h1>
+    <p>The grid-row property is a shorthand property for the grid-row-start and the grid-row-end properties.</p>
+
+    <!--Example
+Place the first grid item at row-line 1, and let it span 2 rows:
+
+.item1 {
+  grid-row: 1 / span 2;
+}-->
+
+    <h2>All CSS Grid Lines Properties</h2>
+
+    <!--Property	Description
+        
+    display	            Specifies the display behavior (the type of rendering box) of an element
+    grid-column	        A shorthand property for the grid-column-start and the grid-column-end properties
+    grid-column-end	    Specifies where to end the grid item
+    grid-column-start	Specifies where to start the grid item
+    grid-row	        A shorthand property for the grid-row-start and the grid-row-end properties
+    grid-row-end	    Specifies where to end the grid item
+    grid-row-start	    Specifies where to start the grid item-->
+
+
+</body>
+</html>

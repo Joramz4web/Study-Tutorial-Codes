@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            background: dodgerblue;
+        }
+        .flex-container > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Flexbox</h1>
+    <h2>Flexible Boxes</h2>
+
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+
+        <p>Try to resize the browser window.</p>
+        <p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+
+        <h2>What is CSS Flexbox?</h2>
+        <pre>
+            Flexbox is short for the Flexible Box Layout module.
+            Flexbox is a layout method for arranging items in rows or columns.
+            Flexbox makes it easier to design a flexible responsive layout structure, without using float or positioning.
+        </pre>
+
+        <h1>CSS Flexible Box Layout Module</h1>
+        <p>Before the Flexible Box Layout module, there were four layout modes:</p>
+        <ul>
+            <li>Block, for sections in a webpage</li>
+            <li>Inline, for text</li>
+            <li>Table, for two-dimensional table data</li>
+            <li>Positioned, for explicit position of an element</li>
+        </ul>
+
+        <p>NOTE: CSS flexbox is supported in all modern browsers.</p>
+        <h2>CSS Flexbox Components</h2>
+        <p>A flexbox always consists of:<br>
+            <ul>
+                <li><b>aFlex Container - </b> the parent (container) div element</li>
+                <li><b>Flex Items - </b>the items inside the container of the div</li>
+            </ul>
+        </p>
+
+        <h2>A Flex Container with Three Flex Items</h2>
+        <p>To start using CSS Flexbox, you need to first define a flex container.</p>
+        <p>The flex container becomes flexible by setting the display property to flex.</p>
+        <p>The element above represents a flex container (the blue area) with three flex items.</p>
+
+        <!--<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>Create a Flex Container</h1>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+<p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+
+<p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+
+</body>
+</html>-->
+
+
+</body>
+</html>
