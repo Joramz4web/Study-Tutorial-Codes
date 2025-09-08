@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web storage</title>
+</head>
+<body>
+    <h1>HTML Web Storage API</h1>
+    <p>HTML Web Storage API; better than cookies.</p>
+
+    <h2>What is HTML Web Storage?</h2>
+    <p>With web storage, applications can store data locally within the user's browser.
+
+    Before HTML5, application data had to be stored in cookies, included in every server request. Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance.
+
+    Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.
+
+    Web storage is per origin (per domain and protocol). All pages, from one origin, can store and access the same data.</p>
+
+    <h2>Web Storage API Objects</h2>
+    <p>Web storage provides two objects for storing data in the browser:</p>
+
+    <ul>
+        <li>window.localStorage - stores data with no expiration date (data is not lost when the browser tab is closed)</li>
+        <li>window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)</li>
+    </ul>
+
+    <h3>Test Web Storage API Support</h3>
+
+    <p>Before using web storage, we can quickly check browser support for localStorage and sessionStorage:</p>
+
+
+        <div id="result"></div>
+
+    <script>
+        const x = document.getElementById("result");
+        if (typeof(Storage) !== "undefined") {
+        x.innerHTML = "Your browser supports Web storage!";
+        } else {
+        x.innerHTML = "Sorry, no Web storage support!";
+        }
+    </script>
+
+    <h2>The localStorage Object</h2>
+
+    <p>The localStorage object stores the data with no expiration date. The data will not be lost when the browser is closed, and will be available the next day, week, or year.</p>
+
+    <div id="result"></div>
+
+<script>
+    const t = document.getElementById("result");
+
+    // Check browser support
+    if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "Smith");
+    localStorage.setItem("bgcolor", "yellow");
+    // Retrieve
+    x.innerHTML = localStorage.getItem("lastname");
+    x.style.backgroundColor = localStorage.getItem("bgcolor");
+    } else {
+    x.innerHTML = "Sorry, no Web storage support!";
+    }
+</script>
+
+    <h3>Example explained:</h3>
+
+    <ul>
+        <li>Use the localStorage.setItem() method to create name/value pairs</li>
+        <li>Use the localStorage.getItem() method to retrieve the values set</li>
+        <li>Retrieve the value of "lastname" and insert it into an element with id="result"</li>
+        <li>Retrieve the value of "bgcolor" and insert it into the style backgroundColor of the element with id="result"</li>
+    </ul>
+
+    <p>The syntax for removing the "lastname" localStorage item is as follows:</p>
+    <!--localStorage.removeItem("lastname");
+    
+    Note: Name/value pairs are always stored as strings. Remember to convert them to another format when needed!-->
+
+    <h2>Counting Clicks with localStorage</h2>
+
+    <p>The following example counts the number of times a user has clicked a button. In this code the value string is converted to a number to be able to increase the counter:</p>
+
+<!--<script>
+    function clickCounter() {
+    const x = document.getElementById("result");
+
+    if (typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+        localStorage.clickcount = 1;
+        }
+        x.innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s)!";
+    } else {
+        x.innerHTML = "Sorry, no Web storage support!";
+  }
+}
+</script>-->
+
+    <h1>The sessionStorage Object</h1>
+
+    <p>The sessionStorage object is equal to the localStorage object, except that it stores the data for only one session! The data is deleted when the user closes the specific browser tab.</p>
+
+    <h2>Counting Clicks with sessionStorage</h2>
+    <p>The following example counts the number of times a user has clicked a button, in the current session:</p>
+
+<!--<script>
+    function clickCounter() {
+    const x = document.getElementById("result");
+
+    if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    x.innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session!";
+    } else {
+    x.innerHTML = "Sorry, no Web storage support!";
+  }
+}
+</script>-->
+
+</body>
+</html>

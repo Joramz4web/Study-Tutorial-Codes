@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML Server-Sent Events API</h1>
+    <p>The Server-Sent Events (SSE) API enables pushing messages/updates from a server to the web page via HTTP connection.</p>
+
+    <h2>Server-Sent Events - One Way Messaging</h2>
+    <p>A server-sent event is when a web page automatically gets messages/updates from a server.</p>
+    <p>Normally, a web page has to request data from the server, but with server-sent events, the updates are pushed automatically.</p>
+    <p>Examples: Facebook/Twitter updates, stock market updates, news feeds, sport results, etc.</p>
+
+    <h3>Receive Server-Sent Event Notifications</h3>
+    <p>The EventSource object is used to receive server-sent event notifications:</p>
+
+        <h1>Getting Server Updates</h1>
+
+        <div id="result"></div>
+
+        <script>
+        const x = document.getElementById("result");
+        if(typeof(EventSource) !== "undefined") {
+        var source = new EventSource("demo_sse.php");
+        source.onmessage = function(event) {
+            x.innerHTML += event.data + "<br>";
+        };
+        } else {
+        x.innerHTML = "Sorry, no support for server-sent events.";
+        }
+        </script>
+
+        <h3>Example explained:</h3>
+        <ul>
+            <li>Create a new EventSource object, and specify the URL of the page sending the updates (in this example "demo_sse.php")</li>
+            <li>Each time an update is received, the onmessage event occurs</li>
+            <li>When an onmessage event occurs, put the received data into the element with id="result"</li>
+        </ul>
+
+        <h2>Check Browser Support</h2>
+        <p>In the tryit example above there were some extra lines of code to check browser support for server-sent events:</p>
+
+        <!--if(typeof(EventSource) !== "undefined") {
+        // Yes! Server-sent events support!
+        // Some code.....
+        } else {
+        // Sorry! No server-sent events support..
+        }-->
+
+        <h2>Server-Side Code Example</h2>
+        <p>For the example above to work, you need a server capable of sending data updates (like PHP or ASP).</p>
+        <p>The server-side event stream syntax is simple. Set the "Content-Type" header to "text/event-stream". Now you can start sending event streams.</p>
+        <p>Code in PHP (demo_sse.php):</p>
+
+        <!--<?php
+        header('Content-Type: text/event-stream');
+        header('Cache-Control: no-cache');
+
+        $time = date('r');
+        echo "data: The server time is: {$time}\n\n";
+        flush();
+        ?>-->
+
+        <h3>Code in ASP (VB) (demo_sse.asp):</h3>
+        <!--<%
+        Response.ContentType = "text/event-stream"
+        Response.Expires = -1
+        Response.Write("data: The server time is: " & now())
+        Response.Flush()
+        %>-->
+
+        <p>Code explained:</p>
+        <ul>
+            <li>Set the "Content-Type" header to "text/event-stream"</li>
+            <li>Specify that the page should not cache</li>
+            <li>Output the data to send (Always start with "data: ")</li>
+            <li>Flush the output data back to the web page</li>
+        </ul>
+
+        <h2>The EventSource Object</h2>
+        <p>In the examples above we used the onmessage event to get messages. But other events are also available:</p>
+
+        <!--Events	    Description
+            onopen	    When a connection to the server is opened
+            onmessage	When a message is received
+            onerror	    When an error occurs-->
+
+</body>
+</html>
