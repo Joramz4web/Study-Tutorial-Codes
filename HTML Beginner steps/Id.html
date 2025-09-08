@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>HTML Id</title>
+    </head>
+        <body>
+            <h1>Using the id Attribute in JavaScript</h1>
+        <!--The id attribute can also be used by JavaScript to perform some tasks for that specific element.
+JavaScript can access an element with a specific id with the getElementById() method:
+Example: Use the id attribute to manipulate text with JavaScript:-->
+
+            <h2>Using the 'Id' attribute in JavaScript </h2>
+            <p>Javascript can access an element with a specific id by using the getElementById() method:</p>
+
+            <h1 id="myHeader">Hello world!</h1>
+            <button onclick="displayResult()">Click to Change text</button>
+
+            <script>
+                function displayResult() {
+                    document.getElementById("myHeader").innerHTML = "Have a nice day!";
+                }
+            </script>
+
+
+        </body>
+
+</html>

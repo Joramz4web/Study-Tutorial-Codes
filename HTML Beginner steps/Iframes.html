@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Iframes</title>
+</head>
+<body>
+    <h1>HTML Iframes</h1>
+        <p>An HTML iframe is used to display a web page within a web page.</p>
+    <!-- <h2>HTML Iframe Syntax</h2>-->
+       
+    <!--<p>The HTML <iframe> tag specifies an inline frame.
+An inline frame is used to embed another document within the current HTML document.</p>
+Syntax
+<iframe src="url" title="description"></iframe>
+Tip: It is a good practice to always include a title attribute for the <iframe>. 
+This is used by screen readers to read out what the content of the iframe is.-->
+
+<!--Iframe - Set Height and Width
+Use the height and width attributes to specify the size of the iframe.
+The height and width are specified in pixels by default
+Example:-->
+<iframe src="https://www.wikipedia.org/" height="200" width="300" title="Iframe Example"></iframe>
+    
+<!--YouTube Iframe:-->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" 
+  title="YouTube video player" frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
+
+<!--Iframe - Remove the Border
+By default, an iframe has a border around it.
+To remove the border, add the style attribute and use the CSS border property:-->
+
+    <h2>Remove the Iframe Border</h2>
+    <p>To remove the default border of iframe, use CSS:</p>
+
+    <iframe src="https://www.wikipedia.org/" style="border: none;" title="Iframe Example"></iframe>
+
+    <!--Iframe - Target for a Link
+    An iframe can be used as the target frame for a link.
+The target attribute of the link must refer to the name attribute of the iframe:-->
+
+    <h2>Iframe - Target for a link</h2>
+
+    <iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe_Example"></iframe>
+
+    <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+    <p>When the target attribute of a link matches the name of the iframe, the link will open in the iframe.</p>
+
+
+    <!--Chapter Summary
+The HTML <iframe> tag specifies an inline frame
+The src attribute defines the URL of the page to embed
+Always include a title attribute (for screen readers)
+The height and width attributes specify the size of the iframe
+Use border:none; to remove the border around the iframe-->
+
+</body>
+</html>

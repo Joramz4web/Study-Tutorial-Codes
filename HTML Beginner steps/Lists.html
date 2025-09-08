@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists</title>
+</head>
+<body>
+    <!--TOPIC HTML Lists
+    HTML lists allow web developers to group a set of related items in lists.-->
+
+    <!--For examples: An unordered HTML list:
+    And An ordered HTML list:-->
+
+    <h2>An Unordered HTML Lists</h2>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <h2>An ordered HTML Lists</h2>
+    <ol>
+        <li>Coffe</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <!--HTML Description Lists
+HTML also supports description lists.
+
+A description list is a list of terms, with a description of each term.
+
+The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term:-->
+
+    <!--Example:-->
+    <dl>
+        <dt>Coffee</dt>
+        <dd>-Black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>-White cold drink</dd>
+    </dl>
+
+    <!--Tag	Description
+<ul>	Defines an unordered list
+<ol>	Defines an ordered list
+<li>	Defines a list item
+<dl>	Defines a description list
+<dt>	Defines a term in a description list
+<dd>	Describes the term in a description list-->
+
+    <h2>HTML Unordered Lists</h2>
+    <!--The HTML <ul> tag defines an unordered (bulleted) list.
+        Unordered HTML List
+An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.
+The list items will be marked with bullets (small black circles) by default:
+Example:-->
+        <ul>
+            <li>Coffe</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <h3>Unordered HTML List - Choose List Item Marker</h3>
+    <p>The CSS list-style-type property is used to define the style of the list item marker. It can have one of the following values:</p>
+
+<!--Value	Description
+disc	    Sets the list item marker to a bullet (default)
+circle	    Sets the list item marker to a circle
+square	    Sets the list item marker to a square
+none	    The list items will not be marked-->
+
+        <h1>The Disc list example:</h1>
+        <ul style="list-style-type: disc;">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <!--Cirlcle:-->
+         <h1>The circle list :</h1>
+        <ul style="list-style-type: circle;">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+         <!--Square:-->
+          <h1>The Square list:</h1>
+        <ul style="list-style-type: circle;">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <h1>Nested HTML Lists- (Lists can be nested (list inside list):)</h1>
+        <ul>
+            <li>Coffee</li>
+            <li>Tea
+                <ul>
+                    <li>Black tea</li>
+                    <li>Green tea</li>
+                </ul>
+            </li>
+            <lil>Milk</lil>
+        </ul>
+
+        
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Google Ai Code</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .form-container 
+        {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h1 
+        {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group 
+        {
+            margin-bottom: 15px;
+        }
+        label 
+        {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        input,
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"]
+        {
+            width: calc(100% - 22px); /* Adjust for padding and border*/
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /*Include padding and border in the element's*/
+        }
+        .buttons 
+        {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        button 
+        {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+        }
+         button[type="submit"]
+        {
+            background-color: #4CAF50; /*Green*/
+        }
+         button[type="reset"]
+        {
+            background-color: #f44336; /*Red*/
+        }
+        .footer 
+        {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #888;
+        }
+    </style>
+
+</head>
+<body>
+           <div class="form-container">
+            <h1>HTML form</h1>
+
+               <form action="#" method="post">
+
+                    <div class="form-group">
+                        <label for="firstName">First Name :</label>
+                        <input type="text" id="firstName" name="firstName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name :</label>
+                        <input type="text" id="lastName" name="lastName">
+                    </div>
+
+                     <div class="form-group">
+                        <label for="dob">Date of Birth :</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email id:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobileNumber">Mobile Number :</label>
+                        <input type="tel" id="mobileNumber" name="mobileNumber">
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit">SUBMIT</button>
+                        <button type="reset">RESET</button>
+                    </div>
+               </form>
+               <div class="footer">
+                tutorialJoramz4D.com
+               </div>
+        </div>
+</body>
+</html>
