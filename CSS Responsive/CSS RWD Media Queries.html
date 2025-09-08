@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS RWD-Media Queries</title>
+</head>
+<body>
+    <h1>Responsive Web Design - Media Queries</h1>
+    <h2>What is a Media Query?</h2>
+
+    <p>Media query is a CSS technique introduced in CSS3.</p>
+    <p>It uses the @media rule to include a block of CSS properties only if a certain condition is true.</p>
+
+    <!--Example
+If the browser window is 600px or smaller, the background color will be lightblue:
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}-->
+
+    <h2>Add a Breakpoint</h2>
+
+    <p>Earlier in this tutorial we made a web page with rows and columns, and it was responsive, but it did not look good on a small screen.</p>
+    <p>Media queries can help with that. We can add a breakpoint where certain parts of the design will behave differently on each side of the breakpoint.</p>
+
+    <!--<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main main right'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-container > div {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.item1 {
+  grid-area: header;
+  background-color: purple;
+  text-align: center;
+  color: #ffffff;
+}
+
+.item1 > h1 {
+  font-size: 40px;
+}
+
+.item2 {
+  grid-area: menu;
+  }
+  
+.item2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item2 li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.item2 li:hover {
+  background-color: #0099cc;
+}
+  
+.item3 {
+  grid-area: main;
+}
+
+.item3 > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.item3 > p {
+  margin-bottom: 7px;
+}
+
+.item4 {
+  grid-area: right;
+  border: 2px solid #0099cc;
+  background-color: white;
+  padding: 15px;
+  color: #000000;
+}
+
+.item4 > h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.item4 li {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.item5 {
+  grid-area: footer;
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+
+  <div class="item1"><h1>Chania</h1></div>
+
+  <div class="item2">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+</div>
+
+  <div class="item3">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete.</p>
+    <p>The city can be divided in two parts, the old town and the modern city. The old town is situated next to the old harbour and is the matrix around which the whole urban area was developed.</p>
+    <p>Chania lies along the north west coast of the island Crete.</p>
+  </div>  
+
+  <div class="item4">
+    <h2>Facts:</h2>
+    <ul>
+      <li>Chania is a city on the island of Crete</li>
+      <li>Crete is a Greek island in the Mediterranean Sea</li>
+    </ul>
+  </div>
+
+  <div class="item5"><p>Resize the browser window to see how the content respond to the resizing.</p></div>
+  
+</div>
+
+</body>
+</html>-->
+
+    <h2>Another Breakpoint</h2>
+    <p>You can add as many breakpoints as you like.</p>
+    <p>We will also insert a breakpoint between tablets and mobile phones.</p>
+
+    <!--@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
+}
+
+@media only screen and (min-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 3 / span 6;}
+  .item5 {grid-area: 4 / span 6;}
+}
+
+@media only screen and (min-width: 768px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 2 / span 1;}
+  .item5 {grid-area: 3 / span 6;}
+}-->
+
+    <h2>Typical Device Breakpoints</h2>
+    <p>There are tons of screens and devices with different heights and widths, so it is hard to create an exact breakpoint for each device. To keep things simple you could target five groups:</p>
+
+    <!--Example
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}-->
+
+    <h2>Orientation: Portrait / Landscape</h2>
+    <p>Media queries can also be used to change layout of a page depending on the orientation of the browser.</p>
+    <p>You can have a set of CSS properties that will only apply when the browser window is wider than its height, a so called "Landscape" orientation:</p>
+
+    <!--Example
+The web page will have a lightblue background if the orientation is in landscape mode:
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+}-->
+
+    <h2>Hide Elements With Media Queries</h2>
+    <p>Another common use of media queries, is to hide elements on different screen sizes:</p>
+    <p>I will be hidden on small screens.</p>
+
+    <!--Example
+/* If the screen size is 600px wide or less, hide the element */
+@media only screen and (max-width: 600px) {
+  div.example {
+    display: none;
+  }
+}-->
+
+    <h2>Change Font Size With Media Queries</h2>
+    <p>You can also use media queries to change the font size of an element on different screen sizes:</p>
+
+    <h1>Variable Font Size.</h1>
+    <!--Example
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}-->
+
+
+</body>
+</html>
