@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - The @property Rule</title>
+
+    <style>
+
+        /*Simple @property Example
+        @property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+@property --my-txt-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: darkblue;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: var(--my-bg-color);
+  color: var(--my-txt-color);  
+}
+   */
+
+    </style>
+</head>
+<body>
+    <h1>CSS - The @property Rule</h1>
+    <h2>The CSS @property Rule</h2>
+
+    <p>The @property rule is used to define custom CSS properties directly in the stylesheet without having to run any JavaScript.</p>
+
+    <p>This rule has data type checking and constraining, sets default values, and defines whether the property can inherit values or not.</p>
+
+    <!--Example of defining a custom property:
+
+@property --myColor {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}-->
+
+<p>The definition above says that --myColor is a color property, it can inherit values from parent elements, and its default value is lightgray.</p>
+<p>To use the custom property in CSS, we use the var() function:</p>
+
+<!--body {
+  background-color: var(--myColor);
+}-->
+
+<p>The benefits of using @property:</p>
+<ul>
+    <li>Type checking: You must specify the data type of the custom property, such as number, color, length, etc. This prevents errors and ensures that custom properties are used correctly</li>
+    <li>Set default value: You set a default value for the custom property. This ensures that if an invalid value is assigned later, the browser uses the defined fallback value</li>
+    <li>Set inheritance behavior: You must specify whether the custom property will, by default, inherit values from its parent elements or not</li>
+</ul>
+
+    <!--Simple @property Example-->
+
+    <h2>Simple @property Example</h2>
+    <p>The following example defines two custom properties: my-bg-color and my-txt-color. Then, the div uses the custom properties in background-color and color:</p>
+
+    <h1>The @property Rule</h1>
+    <div>This is a div with some text.</div>
+
+    <!--Another @property Example-->
+
+    <h1>Another @property Example</h1>
+    <p>In the following example we use the default custom property on the <div> element. Then we override the custom property in class .fresh and class .nature (by setting some other colors), and it works perfectly fine:</p>
+
+    <!--<!DOCTYPE html>
+<html>
+<head>
+<style>
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: var(--my-bg-color);
+}
+
+.fresh {
+    --my-bg-color: #ff6347;
+}
+
+.nature {
+    --my-bg-color: rgb(120, 180, 30);
+}
+</style>
+</head>
+<body>
+
+<h1>The @property Rule</h1>
+
+<div>DIV1</div>
+<div class="fresh">DIV2</div>
+<div class="nature">DIV3</div>
+
+</body>
+</html> -->
+
+<h2>RESULT PAGE</h2>
+<img src="Multiple columns/property-rule.png">
+
+<h2>Avoid Error with Type Checking and Fallback Value</h2>
+
+<p>In the following example we set the custom property in class .nature to an integer. This is not valid, and the browser will use the fallback color, which is defined in the initial-value property (lightgray):</p>
+
+<!--Example
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 15px;
+  background-color: var(--my-bg-color);
+}
+
+.fresh {
+  --my-bg-color: #ff6347;
+}
+
+.nature {
+  --my-bg-color: 2;
+}-->
+
+<h2>Use of the inherits Value</h2>
+<p>In the following example we will set the inherits value to false. This means that the custom property WILL NOT inherit values from its parent elements. Look at the result:</p>
+
+<!--Example
+@property --my-bg-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: lightgray;
+}-->
+
+<p>The next example sets the inherits value to true. This means that the custom property WILL inherit values from its parent elements. Look at the result:</p>
+
+    <h2>Create Smooth Animation with @property</h2>
+    <p>A complete new opportunity you can achieve with the @property rule, is to animate something that could not be animated before: Gradients. Look at the following example:</p>
+
+    <!--Example
+Specify two custom properties for a gradient:
+
+@property --startColor {
+  syntax: "<color>";
+  initial-value: #EADEDB;
+  inherits: false;
+}
+
+@property --endColor {
+  syntax: "<color>";
+  initial-value: #BC70A4;
+  inherits: false;
+}-->
+
+<p>CSS @property Rule</p>
+<!--Property	Description
+@property	Define custom CSS properties directly in the stylesheet without having to run any JavaScript-->
+    
+</body>
+</html>

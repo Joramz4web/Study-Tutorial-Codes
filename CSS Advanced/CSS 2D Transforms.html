@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 2D Transforms</title>
+
+    <style> 
+
+    /*Example: The translate() Method*/
+        div 
+        {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            transform: translate(50px,100px);
+        }
+
+        /*The CSS rotate() Function*/
+
+        div.Normal 
+        {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        div#myDiv 
+        {
+        transform: rotate(20deg); /*deg-represents degrees*/
+        }
+</style>
+
+</head>
+<body>
+    <h1>CSS 2D Transforms</h1>
+
+    <h2>CSS 2D Transforms</h2>
+
+    <p>The CSS transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, and skew elements.</p>
+    <p>Mouse over the element below to see a 2D transformation:</p>
+
+    <ul>
+        <li>translate()</li>
+        <li>rotate()</li>
+        <li>scaleX()</li>
+        <li>scaleY()</li>
+        <li>scale()</li>
+        <li>skewX()</li>
+        <li>skewY()</li>
+        <li>skew()</li>
+        <li>matrix()</li>
+    </ul>
+    <h2>The CSS translate() Function</h2>
+    <p>The translate() function moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).</p>
+    <p>The following example moves the 'div' element 50 pixels to the right, and 100 pixels down from its current position:</p>
+
+    <!--Example: The translate() Method-->
+
+    <h1>The translate() Method</h1>
+    <p>The translate() method moves an element from its current position:</p>
+
+    <div>
+    This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+    </div>
+    <br><br><br><br><br><br>
+    
+    <!--The CSS rotate() Function-->
+
+    <h2>The CSS rotate() Function</h2>
+    <pre>
+        The rotate() function rotates an element clockwise or counter-clockwise according to a given degree.
+        The following example rotates the div element clockwise with 20 degrees:
+    </pre>
+
+    <!--Using negative values will rotate the element counter-clockwise.
+    The following example rotates the <div> element counter-clockwise with 20 degrees:-->
+
+        <h1>The rotate() Method</h1>
+
+        <p>The rotate() method rotates an element clockwise or counter-clockwise.</p>
+
+        <div class="Normal">
+        This a normal div element.
+        </div>
+
+        <div id="myDiv">
+        This div element is rotated clockwise 20 degrees.
+        </div><br><br>
+
+    <!--Using negative values will rotate the element counter-clockwise.
+        The following example rotates the <div> element counter-clockwise with 20 degrees:
+            Example
+        div {
+        transform: rotate(-20deg);
+        }-->
+
+        <h2>The CSS scale() Function</h2>
+        <p>The scale() function increases or decreases the size of an element (according to the parameters given for the width and height).</p>
+
+        <p>The following example increases the div element to be two times of its original width, and three times of its original height: </p>
+
+        <!--Example
+        div {
+        transform: scale(2, 3);
+        }-->
+
+        <p>The following example decreases the div element to be half of its original width and height: </p>
+
+        <!--Example
+        div {
+        transform: scale(0.5, 0.5);
+        }-->
+
+        <!--The CSS scaleX() Function-->
+
+        <h2>The CSS scaleX() Function</h2>
+        <pre>
+            The scaleX() function increases or decreases the width of an element.
+            The following example increases the div element to be two times of its original width: 
+        </pre>
+
+        <!--Example
+        div {
+        transform: scaleX(2);
+        }-->
+                
+        <p>The following example decreases the div element to be half of its original width:</p>
+
+        <!--Example
+        div {
+        transform: scaleX(0.5);
+        }-->
+
+        <h2>The CSS scaleY() Function</h2>
+
+        <p>The scaleY() function increases or decreases the height of an element.</p>
+        <p>The following example increases the div element to be three times of its original height: </p>
+
+        <!--Example
+        div {
+        transform: scaleY(3);
+        }-->
+
+        <p>The following example decreases the div element to be half of its original height: </p>
+
+        <!--Example
+        div {
+        transform: scaleY(0.5);
+        }-->
+
+        <h2>The CSS skewX() Function</h2>
+        <pre>
+            The skewY() function skews an element along the Y-axis by the given angle.
+            The following example skews the div element 20 degrees along the Y-axis:
+        </pre>
+
+        <!--Example
+        div {
+        transform: skewY(20deg);
+        }-->
+
+        <h2>The CSS skew() Function</h2>
+
+        <pre>
+            The skew() function skews an element along the X and Y-axis by the given angles.
+            The following example skews the div element 20 degrees along the X-axis, and 10 degrees along the Y-axis:
+        </pre>
+
+        <!--Example
+        div {
+        transform: skew(20deg, 10deg);
+        }-->
+
+        <p>If the second parameter is not specified, it has a zero value. So, the following example skews the div element 20 degrees along the X-axis:</p>
+
+        <!--Example
+        div {
+        transform: skew(20deg);
+        }-->
+
+        <h2>The CSS matrix() Function</h2>
+
+        <pre>
+            The matrix() function combines all the 2D transform functions into one.
+            The matrix() function take six parameters, containing mathematic functions, which allows you to rotate, scale, move (translate), and skew elements.
+            The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+        </pre>
+
+        <!--Example
+        div {
+        transform: matrix(1, -0.3, 0, 1, 0, 0);
+        }
+        -->
+
+</body>
+</html>
