@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Canvas Graphics</title>
+</head>
+<body>
+    <h1>HTML Canvas Graphics</h1>
+    <!--The HTML <canvas> element is used to draw graphics on a web page.
+
+The graphic to the left is created with <canvas>. It shows four elements: a red rectangle, a gradient rectangle, a multicolor rectangle, and a multicolor text.-->
+
+    <h2>What is HTML Canvas?</h2>
+
+    <p>The HTML canvas element is used to draw graphics, on the fly, via JavaScript.
+    The canvas element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+
+    Canvas has several methods for drawing paths, boxes, circles, text, and adding images. Canvas is supported by all major browsers.</p>
+
+        <h3>Canvas Examples</h3>
+    <p>A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content. The markup looks like this:</p>
+
+    <!--   <canvas id="myCanvas" width="200" height="100"></canvas>
+
+    Note: Always specify an id attribute (to be referred to in a script), and a width and height attribute to define the size of the canvas. To add a border, use the style attribute.
+
+    Here is an example of a basic, empty canvas:-->
+
+        <canvas id="myCanvas" width="200" height="100" style="border: 1px solid #000000;">Your browser does nit support the HTML canva tag.</canvas>
+
+        <h2>Add a JavaScript</h2>
+
+    <p>After creating the rectangular canvas area, you must add a JavaScript to do the drawing. Here are some examples: Draw a Line</p>
+
+    <!--For example:-->
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+
+    <!-- Adding a javascript-->
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,100);
+        ctx.stroke();
+    </script>
+
+
+    <h1>Drawing a Circle inside the Rectangle</h1>
+
+    <canvas id="myCircle" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+
+    <!--Observe the change of the id name to myCircle-->
+    <script>
+        var c = document.getElementById("myCircle");
+        var cty = c.getContext("2d"); 
+        cty.beginPath();
+        cty.arc(95,50,40,0,2*Math.PI); 
+        cty.stroke();
+    </script>
+
+    <!--NOTE: 2d a full circle is 2 * Math.PI radians (360 degrees).
+    Math.PI is a property of JavaScript's built-in Math object. It represents the mathematical constant π (pi), which is approximately equal to 3.14159.
+    The getContext() method is used with the HTML <canvas> element to obtain a drawing context on the canvas. -->
+
+    <h1>Draw a Text "Hellow World"</h1>
+
+    <canvas id="drawText" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+
+        <script>
+            var m = document.getElementById("drawText");
+            var cmz = m.getContext("2d");
+            cmz.font = "30px Arial";
+            cmz.fillText("Hello Wolrd", 10, 50);
+        </script>
+
+        <h1>Stroke Text</h1>
+
+        <canvas id="canvasStroke" width="200" height="100" style="border:1px solid #d3d3d3;"> Your browser does not support the HTML canvas tag.</canvas>
+
+        <script>
+            var w = document.getElementById("canvasStroke");
+            var cwz = w.getContext("2d");
+            cwz.font = "30px Arial";
+            cwz.strokeText("Hello World", 10,50);
+        </script>
+
+        <h1>Draw Linear Gradient with color</h1>
+
+    <canvas id="gradColor" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+
+
+        <script>
+            var d = document.getElementById("gradColor");
+            var gta = d.getContext("2d");
+            //create gradient
+            var grd = gta.createLinearGradient(0,0,200,0);
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"white");
+            //Fill the gradient
+            gta.fillStyle = grd;
+            gta.fillRect(10,10,150,80);
+
+        </script>
+
+
+        <h1>Draw Image</h1>
+    <!--Example:-->
+        <p>Image to Use:</p>
+
+        <img id="scream" src="emoji-img/emoji.jpg" alt="The emoji" width="220" height="277">
+
+        <p>Canvas to fill:</p>
+
+        <canvas id="emoTip" width="250" height="300" style="border: 1px solid #d3d3d3;">your browser does not support the HTML canvas tg.</canvas>
+
+        <p><button onclick="emoTip()">Try It!</button></p>
+
+        <script>
+            function emoTip() {
+                var j = document.getElementById("emoTip");
+                var cj4 = j.getContext("2d");
+                var img = document.getElementById("scream");
+                cj4.drawImage(img,10,10);
+            }
+        </script>
+
+</body>
+</html>
