@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass Intro</title>
+</head>
+<body>
+    <h1>Sass Introduction</h1>
+    <h2>What You Should Already Know</h2>
+
+    <p>Before you continue you should have a basic understanding of the following:</p>
+    <ul><li>HTML</li><li>CSS</li></ul>
+
+    <h1>What is Sass?</h1>
+    <ul>
+        <li>Sass stands for Syntactically Awesome Stylesheet</li>
+        <li>Sass is an extension to CSS</li>
+        <li>Sass is a CSS pre-processor</li>
+        <li>Sass is completely compatible with all versions of CSS</li>
+        <li>Sass reduces repetition of CSS and therefore saves time</li>
+        <li>Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 2006</li>
+        <li>ass is free to download and use</li>
+    </ul>
+
+    <h2>Why Use Sass?</h2>
+    <p>Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS pre-processor can help.</p>
+
+    <p>Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, and other stuff.</p>
+
+    <h2>A Simple Example why Sass is Useful</h2>
+    <p>
+        Let's say we have a website with three main colors:
+        <ul>
+            <li>#a2b9bc</li>
+            <li>#b2ad7f</li>
+            <li>#878f99</li>
+        </ul>
+    </p>
+    <p>So, how many times do you need to type those HEX values? A LOT of times. And what about variations of the same colors?</p>
+    <p>Instead of typing the above values a lot of times, you can use Sass and write this:</p>
+    <!--Sass Example
+/* define variables for the primary colors */
+$primary_1: #a2b9bc;
+$primary_2: #b2ad7f;
+$primary_3: #878f99;
+
+/* use the variables */
+.main-header {
+  background-color: $primary_1;
+}
+
+.menu-left {
+  background-color: $primary_2;
+}
+
+.menu-right {
+  background-color: $primary_3;
+}-->
+  <p>So, when using Sass, and the primary color changes, you only need to change it in one place.</p>
+    
+  <h2>How Does Sass Work?</h2>
+  <p>A browser does not understand Sass code. Therefore, you will need a Sass pre-processor to convert Sass code into standard CSS.</p>
+
+  <!--Tip: Transpiling is a term for taking a source code written in one language and transform/translate it into another language.-->
+
+    <h2>Sass File Type</h2>
+    <p>Sass files has the ".scss" file extension.</p>
+
+    <h2>Sass Comments</h2>
+    <p>Sass supports standard CSS comments /* comment */, and in addition it supports inline comments // comment:</p>
+
+    <!--Sass Example
+/* define primary colors */
+$primary_1: #a2b9bc;
+$primary_2: #b2ad7f;
+
+/* use the variables */
+.main-header {
+  background-color: $primary_1; // here you can put an inline comment-->
+
+</body>
+</html>

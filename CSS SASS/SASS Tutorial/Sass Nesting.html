@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass Nesting</title>
+</head>
+<body>
+    <h1>Sass Nested Rules and Properties</h1>
+    <h2>Sass Nested Rules</h2>
+    <p>Sass lets you nest CSS selectors in the same way as HTML.</p>
+    <p>Look at an example of some Sass code for a site's navigation:</p>
+
+    <!--Example
+SCSS Syntax:
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}-->
+
+    <p>Notice that in Sass, the ul, li, and a selectors are nested inside the nav selector.</p>
+    <p>While in CSS, the rules are defined one by one (not nested):</p>
+
+    <!--CSS Syntax:
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}-->
+
+    <p>Because you can nest properties in Sass, it is cleaner and easier to read than standard CSS.</p>
+
+    <h2>Sass Nested Properties</h2>
+    <p>Many CSS properties have the same prefix, like font-family, font-size and font-weight or text-align, text-transform and text-overflow.</p>
+
+    <p>With Sass you can write them as nested properties:</p>
+
+    <!--Example
+SCSS Syntax:
+
+font: {
+  family: Helvetica, sans-serif;
+  size: 18px;
+  weight: bold;
+}
+
+text: {
+  align: center;
+  transform: lowercase;
+  overflow: hidden;
+}-->
+
+    <p>The Sass transpiler will convert the above to normal CSS:</p>
+    <!--CSS Output:
+
+font-family: Helvetica, sans-serif;
+font-size: 18px;
+font-weight: bold;
+
+text-align: center;
+text-transform: lowercase;
+text-overflow: hidden;-->
+
+
+</body>
+</html>
