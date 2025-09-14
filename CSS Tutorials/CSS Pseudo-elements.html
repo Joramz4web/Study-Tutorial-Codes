@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-elements</title>
+  </head>
+  <body>
+    <h1>CSS Pseudo-elements</h1>
+    <p>A CSS pseudo-element is a keyword that can be added to a selector, to style a specific part of an element.</p>
+    <p>Some common use for pseudo-elements:</p>
+
+    <ul>
+        <li>Style the first letter or first line, of an element</li>
+        <li>Insert content before or after an element</li>
+        <li>Style the markers of list items</li>
+        <li>Style the user-selected portion of an element</li>
+        <li>tyle the viewbox behind a dialog box</li>
+    </ul>
+
+    <p>Syntax: selector::pseudo-element-name {<br>
+  CSS properties<br>
+    }</p>
+
+    <h2>The CSS ::first-line Pseudo-element</h2>
+
+    <p>The ::first-line pseudo-element is used to add a special style to the first line of a text.</p>
+    <p>Note: The ::first-line pseudo-element can only be applied to block-level elements.</p>
+
+    <!--Example
+Format the first line of text in all <p> elements: 
+
+p::first-line {
+  color: red;
+  font-variant: small-caps;
+  font-size: 19px;
+}-->
+
+    <h2>The CSS ::first-letter Pseudo-element</h2>
+
+    <p>The ::first-letter pseudo-element is used to add a special style to the first letter of a text.</p>
+    <p>Note: The ::first-letter pseudo-element can only be applied to block-level elements.</p>
+
+    <!--Example
+Format the first letter of the text in all <p> elements:  
+
+p::first-letter {
+  color: red;
+  font-size: xx-large;
+}-->
+
+    <h2>The CSS ::before Pseudo-element</h2>
+
+    <p>The ::before pseudo-element is used to insert some content before the content of a specified element.</p>
+    <p>Use the content property to specify the content to insert.</p>
+
+    <!--Example
+Insert an image before the content of each <h3> element: 
+
+h3::before {
+  content: url(smiley.gif);
+}-->
+
+    <h2>The CSS ::after Pseudo-element</h2>
+
+    <p>The ::after pseudo-element is used to insert some content after the content of a specified element.</p>
+    <p>Use the content property to specify the content to insert. </p>
+
+    <!--Example
+Insert an image after the content of each <h3> element:
+
+h3::after {
+  content: url(smiley.gif);
+}-->
+
+    <h2>The CSS ::marker Pseudo-element</h2>
+
+    <p>The ::marker pseudo-element is used to style the list item markers.</p>
+    <!--Example
+Style the markers of list items: 
+
+::marker {
+  color: red;
+  font-size: 23px;
+}-->
+
+    <h2>The CSS ::selection Pseudo-element</h2>
+
+    <p>The ::selection pseudo-element is used to style the part of a text that is selected by a user.</p>
+    <!--Example
+Style the user-selected text with a red color, and a yellow background: 
+
+::selection {
+  color: red;
+  background: yellow;
+}-->
+
+    <h2>The CSS ::backdrop Pseudo-element</h2>
+    <p>The ::backdrop pseudo-element is used to style the viewbox behind a dialog box or popover element..</p>
+
+    <!--Example
+Style the viewbox behind a dialog box: 
+
+dialog::backdrop {
+  background-color: lightgreen;
+}-->
+
+    <h2>Pseudo-elements and HTML Classes</h2>
+    <p>Pseudo-elements can easily be combined with HTML classes. </p>
+
+    <!--Example
+Display the first letter of <p> elements with class="intro", in red and in a larger size: 
+
+p.intro::first-letter {
+  color: #ff0000;
+  font-size: 200%;
+}-->
+
+    <h2>Multiple Pseudo-elements</h2>
+
+    <p>Several pseudo-elements can also be combined.</p>
+    <p>In the following example, the first letter of <p> elements will be red and in an xx-large font size. The rest of the first line will be blue and in small-caps. The rest of the paragraph will be in the default font size and color:</p>
+
+    <!--Example
+p::first-letter {
+  color: red;
+  font-size: xx-large;
+}
+
+p::first-line {
+  color: blue;
+  font-variant: small-caps;
+}-->
+
+
+</body>
+</html>

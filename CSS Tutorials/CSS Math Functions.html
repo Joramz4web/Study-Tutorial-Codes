@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Math Functions</title>
+</head>
+<body>
+    <h1>CSS Math Functions</h1>
+
+    <p>CSS math functions allow mathematical expressions to be used as property values.</p>
+    <p>In this chapter, we will explain the following math functions:
+        <ul>
+            <li>calc()</li>
+            <li>max()</li>
+            <li>min()</li>
+            <li>clamp()</li>
+        </ul>
+    </p>
+
+    <h2>The CSS calc() Function</h2>
+    <p>The calc() function performs a mathematical calculation that will be used as the property value.</p>
+    <p>The calc() function supports addition (+), subtraction (-), multiplication (*), and division (/), and can combine different units, like pixels and percentages.</p>
+
+    <!--CSS Syntax
+calc(expression)
+
+Value	    Description
+expression	Required. A mathematical expression. The result will be used as the value
+Let us look at an example:
+
+    Let us look at an example:
+
+Example
+Use calc() to calculate the width and the height of a <div> element:
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#div1 {
+  width: calc(100% - 100px);
+  height: calc(30vh + 50px);
+  margin: auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>The calc() Function</h2>
+
+<p>The width of #div1 is set to 100% minus 100px for padding. This ensures that the #div1 takes up 100% of the container's width, with an offset of 50px on each side (with margin: auto;).</p>
+
+<p>The height of #div1 is set to 30% of the height of the viewport + 50px.</p>
+
+<div id="div1">Some text...</div>
+
+</body>
+</html>-->
+
+    <h2>The CSS max() Function</h2>
+    <p>The max() function takes a comma-separated list of values, and uses the largest value from the list as the property value.</p>
+
+    <!--CSS Syntax
+max(value1, value2, ...)
+
+Value	            Description
+
+value1, value2, ...	Required. A list of comma-separated values
+Let us look at an example:
+
+Example
+Use max() to set the width of #div1 to whichever value is largest, 50% or 300px:
+
+#div1 {
+  height: 100px;
+  width: max(50%, 300px);
+  border: 1px solid black;
+  padding: 10px;
+}-->
+
+    <h2>The CSS min() Function</h2>
+    <p>The min() function takes a comma-separated list of values, and uses the smallest value from the list as the property value.</p>
+
+    <!--CSS Syntax
+min(value1, value2, ...)
+Value	Description
+value1, value2, ...	Required. A list of comma-separated values
+Let us look at an example:
+
+Example
+Use min() to set the width of #div1 to whichever value is smallest, 50% or 300px:
+
+#div1 {
+  height: 100px;
+  width: min(50%, 300px);
+  border: 1px solid black;
+  padding: 10px;
+}-->
+
+    <h2>The CSS clamp() Function</h2>
+    <p>The clamp() function is used to set a value that will adjust responsively between a minimum value and a maximum value depending on the size of the viewport.</p>
+    <p>The clamp() function has three parameters: a minimum value, a preferred value, and a maximum value. If the preferred value is smaller than the minimum value or larger than the maximum value, the preferred value is used.</p>
+
+    <!--CSS Syntax
+clamp(min, preferred, max)
+
+Value	        Description
+
+min	Optional.   Specifies the smallest allowed value
+preferred	    Required. Specifies the preferred value
+max	Optional.   Specifies the largest allowed value
+
+Let us look at an example:-->
+<!--Example
+Set the <h2> element's minimum font-size to 2rem, and the maximum font-size to 3.5rem. Also, set the <p> element's minimum font-size to 1rem, and the maximum font-size to 2.5rem:
+
+h2 {
+  font-size: clamp(2rem, 2.5vw, 3.5rem);
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
+}-->
+
+
+</body>
+</html>

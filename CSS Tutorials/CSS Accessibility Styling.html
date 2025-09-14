@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Accessibility Stylingt</title>
+</head>
+<body>
+    <h1>CSS Accessibility Styling</h1>
+
+    <p>A website should be designed to ensure good accessibility for all users, including those with disabilities.</p>
+    <p>CSS accessibility styling is about using good styling technics to improve the visual clarity, navigation, and overall user experience. </p>
+
+    <h2>CSS Accessibility Styling Technics</h2>
+    <p>Here are some tips and technics on how to improve the accessibility of your web site:</p>
+
+    <h2>1. Provide High Color Contrast</h2>
+
+    <p>Always use a good color contrast between the text and the background for readability. This is especially important for users with visual impairments or color blindness.</p>
+
+    <!--Good Color Contrast
+body {
+  background-color: #ffffff;
+  color: #000000;
+}-->
+
+    <h2>2. Provide Good Font, Font Size and Line Height</h2>
+
+    <p>Always provide a font that is easily readable. In addition, use a proper font size and line height. Use relative units (like rem) for font-size, to allow the user to scale the text size in the browser settings.</p>
+
+    <!--Good Font Example
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}-->
+
+    <h2>3. Have Visible Focus Indicators</h2>
+
+<p>Always use the :focus pseudo-class to ensure that interactive elements (like links, buttons, input fields) have a clear visual focus style.</p>
+<p>Using :focus will ensure that keyboard users and screen-readers understand which element is currently active.</p>
+
+<!--Example
+a:focus, button:focus, input:focus {
+  outline: 2px solid orange;
+}-->
+
+    <h2>4. Avoid Hiding Focus</h2>
+<p>Never remove the default focus outlines, without replacing them with another visible focus style.</p>
+
+<!--Good Example
+button:focus {
+  outline: 2px solid orange;
+}-->
+
+    <h2>5. Use CSS + Semantic HTML</h2>
+
+<p>Use CSS for visual styling, and structure content with semantic HTML elements (instead of non-semantic elements, like div for everything).</p>
+
+    <!--Example
+nav {
+  background-color: #333333;
+  color: white;
+}
+aside {
+  background-color: #333333;
+  color: white;
+}-->
+
+    <h2>6. Respect User Preferences</h2>
+
+    <p>The CSS prefers-reduced-motion @media feature lets you check if a user has asked to reduce motion, such as animations or transitions.</p>
+    <p>Some users have motion sensitivity and prefer websites with less animation. You can use this media query to turn off or tone down animations when needed:</p>
+
+    <!--Example
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}-->
+
+    <h2>Summary</h2>
+    <ul>
+        <li>Provide high color contrast</li>
+        <li>Provide easily readable fonts</li>
+        <li>Keep focus outlines visible</li>
+        <li>Use semantic HTML elements</li>
+        <li>Respect user preferences</li>
+    </ul>
+
+</body>
+</html>

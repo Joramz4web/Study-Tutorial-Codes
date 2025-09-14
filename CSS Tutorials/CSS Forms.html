@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Forms</title>
+
+        <style>
+            form {
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+
+            label {display: block;}
+
+            input[type=text], select {
+                width: 100%;
+                padding: 12px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input[type=submit] {
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+        </style>
+</head>
+<body>
+    <h1>CSS Forms</h1>
+    <h2>CSS Styling Forms</h2>
+
+    <p>CSS is used to style HTML forms. The look of an HTML form can be greatly improved with CSS:</p>
+
+        <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your Last name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Styling Form Input Fields</h2>
+
+        <p>With CSS, you can style most of the different input types, like text fields, password fields, checkboxes, radio buttons, and file inputs. You can also style input labels and form buttons.</p>
+        <p>Some commonly used CSS properties for styling input fields, are:</p>
+
+        <ul>
+            <li style="color: red;"><a href="#"></a>Width</li>
+            <li style="color: red;"><a href="#"></a>Padding</li>
+            <li style="color: red;"><a href="#"></a>Margin</li>
+            <li style="color: red;"><a href="#"></a>Border</li>
+            <li style="color: red;"><a href="#"></a>Border-radius</li>
+            <li style="color: red;"><a href="#"></a>Background-color</li>
+            <li style="color: red;"><a href="#"></a>color</li>
+            <li style="color: red;"><a href="#"></a>Font-size</li>
+        </ul>
+
+        <h2>Style Input Width</h2>
+        <p>The width property is used to set the width of an input field.</p>
+        <p>Tip: The default width of an HTML input text field, is 20 characters.</p>
+        <p>Here we set the width to 100%:</p>
+
+        <!--Example
+    input {
+    width: 100%;
+    }-->
+
+    <p>The example above applies to all input elements. If you only want to style a specific input type, you can use attribute selectors:</p>
+
+    <ul>
+        <li>input[type=text] - will only select text fields</li>
+        <li>input[type=password] - will only select password fields</li>
+        <li>input[type=number] - will only select number fields</li>
+        <li>etc..</li>
+    </ul>
+
+    <h2>Style Input Padding</h2>
+    <p>The padding property is used to add some space inside the text field.</p>
+    <p>Tip: When you have several input fields after each other, you might also want to add some margin, to add more space around them:</p>
+
+    <!--Example
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+  
+Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually borders are included in the total width and height of the elements.-->
+
+    <h2>Style Input Border</h2>
+    <p>The border property is used to change the border size and color, and the border-radius property can be used to add rounded corners:</p>
+    <!--Example
+input[type=text] {
+  border: 2px solid red;
+  border-radius: 8px;
+}
+  
+If you only want a bottom border, use the border-bottom property:
+
+First Name
+____________________________________________________________________-->
+
+    <h2>Style Input Background Color and Color</h2>
+    <p>The background-color property is used to add a background color to the input, and the color property is used to change the text color:</p>
+
+    <!--Example
+input[type=text] {
+  background-color: #3CBC8D;
+  color: white;
+}-->
+
+    <h2>Style Input with Focus</h2>
+    <p>By default, some browsers will add a blue outline around the input when it gets focus (clicked on). You can remove this behavior by adding outline: none; to the input.</p>
+    <p>Use the :focus selector to do something with the input field when it gets focus:</p>
+
+    <!--Example
+input[type=text]:focus {
+  background-color: lightblue;
+}
+  
+Example
+input[type=text]:focus {
+  border: 3px solid #555;
+}-->
+
+    <h2>Style Input with icon/image</h2>
+    <p>If you want an icon inside the input, use the background-image property and position it with the background-position property. Also notice that we add a large left padding to reserve the space of the icon:</p>
+
+    <!--Example
+input[type=text] {
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}-->
+
+    <h2>Animated Search Input</h2>
+    <p>In this example we use the CSS transition property to animate the width of the search input when it gets focus. You will learn more about the transition property later, in our CSS Transitions chapter.</p>
+
+    <!--Example
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}-->
+
+    <h2>Style Textarea</h2>
+    <p>By default, a textarea can be resized with a "grabber" in the bottom right corner. To remove the grabber, set the resize property to none:</p>
+
+    <!--Example
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}-->
+
+    <h2>Style a Dropdown Menu</h2>
+    <!--Example
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}-->
+
+    <h2>Style Form Buttons</h2>
+    <p>Form buttons of type "button", "submit" and "reset" can also be styled with CSS:</p>
+
+    <!--Example
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Tip: use width: 100% for full-width buttons */-->
+
+    <h2>CSS Responsive Form</h2>
+    <p>The following example uses CSS media queries to create a responsive form. You will learn more about media queries in a later chapter.</p>
+    <p>When the screen is less than 600px wide, we make the labels and input fields stack on top of each other, instead of next to each other.</p>
+    <p>Resize the screen to see the form layout change!</p>
+
+
+</body>
+</html>

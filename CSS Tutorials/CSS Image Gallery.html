@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Image Gallery</title>
+
+        <style>
+            div.gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+
+            div.gallery-item {
+                margin: 5px;
+                border: 1px solid #ccc;
+                width: 180px;
+            }
+
+            div.gallery-item:hover {
+                border: 1px solid #777;
+            }
+
+            div.gallery-item img {
+                width: 100%;
+                height: auto;
+            }
+
+            div.gallery-item div.desc {
+                padding: 15px;
+                text-align: center;
+            }
+
+            /*Fitting the content to responsive layout with media queries*/
+
+            @media only screen and (max-width: 700px) {
+                div.gallery-item {
+                    width: 45%;
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+                div.gallery-item {
+                    width: 100%;
+                }
+            }
+        </style>
+</head>
+<body>
+    <h1>CSS Image Gallery</h1>
+    <p>A CSS image gallery is a collection of images that is displayed in an organized, and often responsive way, on a web page.</p>
+
+    <p>Here we use CSS to create an image gallery:</p>
+    <p>The HTML structure for an image gallery is:
+        <ul>
+            <li>A container element to wrap the entire gallery (like a div with class="gallery").</li>
+           <li> Another container element for each image (like a div with class="gallery-item"), that contains the img tag and possibly a description</li>
+        </ul>
+    </p>
+    <p>Here is the HTML and CSS code:</p>
+
+    <h3>Image Gallery</h3>
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <a target="_blank" href="CSS Img/css-img1.jpg">
+                <img src="CSS Img/css-img1.jpg" alt="Proud African woman" width="600" height="400">
+            </a>
+            <div class="desc">Proud African woman</div>
+        </div>
+
+        <div class="gallery-item">
+            <a target="_blank" href="CSS Img/css-img2.jpg">
+                <img src="CSS Img/css-img2.jpg" alt="The green Jungle" width="600" height="400">
+            </a>
+            <div class="desc">The green Jungle</div>
+        </div>
+
+        <div class="gallery-item">
+            <a target="_blank" href="CSS Img/css-img3.jpg">
+                <img src="CSS Img/css-img3.jpg" alt="Smart fashion" width="600" height="400">
+            </a>
+            <div class="desc">Smart fashion</div>
+        </div>
+
+         <div class="gallery-item">
+            <a target="_blank" href="CSS Img/css-img4.jpg">
+                <img src="CSS Img/css-img4.jpg" alt="Peacock Nature" width="600" height="400">
+            </a>
+            <div class="desc">Peacock Nature</div>
+        </div>
+
+    </div>
+
+    <p>Tip: We have used display: flex; for the image gallery above. This layout module is effective for arranging images in rows or columns. You will learn more about CSS Flexbox later in our CSS Tutorial.</p>
+
+    <h2>CSS Responsive Image Gallery</h2>
+
+    <p>Here we use CSS media queries to re-arrange the images on different screen sizes:
+        <ul>
+            <li>If screen is larger than 700px wide - show four images side by side</li>
+            <li>If screen is smaller than 700px - show two images side by side</li>
+            <li>If screens is smaller than 500px - stack the images vertically (width: 100%)</li>
+        </ul>
+    </p>
+    <p>Tip: You will learn more about media queries later in our CSS Tutorial.</p>
+
+
+
+
+
+</body>
+</html>

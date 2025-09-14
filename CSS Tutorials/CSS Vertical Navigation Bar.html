@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Vertical Navigation Bar</title>
+
+        <style>
+            .navlist {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 200px;
+                background-color: #f1f1f1;
+            }
+
+            .navlist li a {
+                display: block;
+                color: black;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            /* Change the link and background color on hover */
+
+            .navlist li a:hover {
+                background-color: #555555;
+                color: white;
+            }
+
+            /*Adding the Active State*
+              li a.active {
+                background-color: #04AA6D;
+                color: white;
+            }*/
+            
+        </style>
+
+</head>
+<body>
+    <h1>CSS Vertical Navigation Bar</h1>
+
+    <p>In a vertical navigation bar, the navigation links are stacked vertically (on top of each other), and is typically aligned along the left or right side of a webpage.</p>
+    <p>The basics of a vertical navigation bar is an unordered list (ul), with list items (li), each holding a link (a), as shown in the Navbar Intro page.</p>
+
+    <h2>CSS Vertical Navbar Example</h2>
+
+    <p>Here, we create a basic vertical navigation bar with a gray background color, and we also change the background color and the text color of the links when the user mouse over them:</p>
+
+    <ul class="navlist">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+    <h2>Example explained:</h2>
+    <ul>
+        <li>The first block (ul)  is similar to the previous page. In addition we have specified a fixed width (200px) and a light gray background color</li>
+
+        <li>The next block (li a) styles a elements inside li elements</li>
+
+        <li>Displaying the links as block elements makes the whole link area clickable (not just the text), and allows us to specify width, padding, margin, height, etc. We add a link color and some padding. We also remove the underline from these a elements</li>
+
+        <li>The last block (li a:hover) changes the link color and background color when a user mouse over them</li>
+    </ul>
+
+    <h2>Active State</h2>
+    <p>Now we add an "active" class to highlight the link corresponding to the current page to let the user know which page/section he/she is on:</p>
+
+    <h2>Center Navbar Links & Add Borders</h2>
+    <p>To center the navbar links, add text-align: center; to li or a.</p>
+    <p>If you want a border around the navbar, add the border property to ul.</p>
+    <p>If you also want borders inside the navbar, add a border-bottom property to all li elements, except for the last one:</p>
+
+    <!--Example
+ul {
+  border: 1px solid #555555;
+}
+
+li {
+  text-align: center;
+  border-bottom: 1px solid #555555;
+}
+
+li:last-child {
+  border-bottom: none;
+}-->
+
+    <h2>Full-height Vertical Navbar</h2>
+    <p>Create a full-height, "sticky" side navigation:</p>
+
+    <!--Example
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 130px;
+  background-color: #f1f1f1;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}-->
+
+    <h2>Responsive Navbar</h2>
+
+    <!--<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin: 0;}
+
+ul.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+ul.sidenav li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 900px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  ul.sidenav li a {
+    float: left;
+    padding: 15px;
+  }
+  
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<ul class="sidenav">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div class="content">
+  <h2>Responsive Navbar Example</h2>
+  <p>Here we use media queries to transform the vertical navbar to a horizontal navbar when the screen size is 900px or less.</p>
+  <p>Another media query is for screens that are 400px or less, which will vertically stack and center the navbar links.</p>
+  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+  <h3>Resize the browser window to see the effect.</h3>
+</div>
+
+</body>
+</html>-->
+
+
+</body>
+</html>

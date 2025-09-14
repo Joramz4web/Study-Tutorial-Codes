@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS The !important Rule</title>
+</head>
+<body>
+    <h1>CSS The !important Rule</h1>
+    <pre>
+        The !important rule is used to give the value of a specific property the highest priority.
+
+        The !important rule will override ALL previous styling rules for that specific property on that element!
+
+        The !important keyword is added to the end of a CSS declaration, before the semicolon.
+    </pre>
+
+    <!--Syntax
+selector {
+  property: value !important;
+}-->
+
+    <h2>CSS !important Rule Example</h2>
+
+    <p>In the following example, all three paragraphs will get a yellow background color, even though the inline style, id selector, and the class selector have a higher specificity. The !important rule overrides ALL styling rules for that specific property on that element!</p>
+
+    <!--Example
+Using the !important rule:
+
+<html>
+<head>
+<style>
+p {
+  background-color: yellow !important;
+}
+
+#myid {
+  background-color: blue;
+}
+
+.myclass {
+  background-color: gray;
+}
+
+</style>
+</head>
+<body>
+
+<p style="background-color:orange;">This is a paragraph.</p>
+<p class="myclass">This is a paragraph.</p>
+<p id="myid">This is a paragraph.</p>
+
+</body>
+</html>-->
+
+    <h2>Use !important Sparingly</h2>
+
+    <p>The only way to override an !important rule is to include another !important rule on a declaration with the same (or higher) specificity in the source code - and here the problem starts!</p>
+    <p>The CSS code will be confusing and the debugging will be hard! Especially if you have a large style sheet!</p>
+    <p>In the following example, it is not very clear which color is considered most important:</p>
+
+    <!--Example
+p {
+  background-color: red !important;
+}
+
+#myid {
+  background-color: blue !important;
+}
+
+.myclass {
+  background-color: gray !important;
+}-->
+
+    <h2>A Few Fair Uses of !important</h2>
+
+    <p>The !important rule can be useful in some cases, like:</p>
+    <ul>
+        <li><b>To override a style that cannot be overridden in any other way. </b> This could be if you are working in a Content Management System (CMS) and cannot edit the CSS code. Then you can set some custom styles to override some of the CMS styles.</li>
+
+        <li><b>. To respect user preferences. </b>Some users have motion sensitivity and prefer websites with less animation. CSS has a @media feature called prefers-reduced-motion that lets you check if a user has asked to reduce motion, such as animations or transitions. You can use !important to turn off or tone down animations and transitions for the users who has these settings:</li>
+
+        <li><b> To create a highly specific, unchangeable style for a specific element.</b>Assume we want a special look for all link buttons on a page:
+        
+        <!--Example
+Style link buttons with a gray background color, white text, and some padding and border:
+
+a.button {
+  background-color: #8c8c8c;
+  color: white;
+  padding: 5px;
+  border: 1px solid black;
+  text-decoration: none;
+        }--></li>
+    </ul>
+
+    <!--Example
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}-->
+
+    <p>Now, if we put a link button inside another element with higher specificity, the properties might get in conflict. Here is an example of this:</p>
+
+    <!--Example
+a.button {
+  background-color: #8c8c8c;
+  color: white;
+  padding: 5px;
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+#myDiv a {
+  color: red;
+  background-color: yellow;
+}-->
+
+    <p>To "force" all buttons to have the same look, no matter what, we can add the !important rule to the properties of the button, like this:</p>
+
+    <!--Example
+a.button {
+  background-color: #8c8c8c !important;
+  color: white !important;
+  padding: 5px !important;
+  border: 1px solid black !important;
+  text-decoration: none !important;
+}
+
+#myDiv a {
+  color: red;
+  background-color: yellow;
+}-->
+
+
+</body>
+</html>

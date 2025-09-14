@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Counters</title>
+</head>
+<body>
+    <h1>CSS Counters</h1>
+
+    <p>With CSS counters, you can create dynamic numbering of elements (like headings, sections, or list items) without using JavaScript.</p>
+    <p>CSS counters are "variables" maintained by CSS, and their values can be incremented (or decremented) by CSS rules.</p>
+
+    <h2>CSS Automatic Numbering With Counters</h2>
+
+    <p>CSS counters are like "variables". The variable values can be incremented (or decremented) by CSS rules.</p>
+    <p>To work with CSS counters we will use the following properties:</p>
+
+        <ul>
+            <li>counter-reset - Creates or resets a counter</li>
+            <li>counter-increment - Increments or decrements a counter</li>
+            <li>content - Inserts generated content (used inside ::before and ::after, to insert the generated content)</li>
+            <li>counter() and counters() functions - Adds the value of a counter to an element</li>
+        </ul>
+        <p>To use a CSS counter, it must first be created with the counter-reset property.</p>
+
+        <h2>CSS Increase and Decrease Counter</h2>
+        <p>The following example creates a counter for the page (in the body selector), then it increments the counter value by 1 for each h2 element and adds the text "Section + countervalue:" to the beginning of each h2 element:</p>
+
+    <!--Example
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}-->
+
+    <p>The counter-increment property has a second parameter. The default value of this is 1 (which increments the counter by one). To decrease the counter value, you can set it to -1.</p>
+    <p>The following example is the same as above, but here we decrement the counter value for each h2 element and adds the text "Section + countervalue:" to the beginning of each h2 element:</p>
+
+    <!--Example
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section -1;
+  content: "Section " counter(section) ": ";
+}
+  
+The following example is the same as above, but here we increment the counter value by 2 for each <h2> element and adds the text "Section + countervalue:" to the beginning of each <h2> element:
+    
+    Example
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section 2;
+  content: "Section " counter(section) ": ";
+}-->
+   
+    <h2>CSS Using Two Counters</h2>
+
+    <p>The following example creates one counter for the page (named "section") and one counter for each h1 element (named "subsection"). The "section" counter will be counted for each h1 element with "Section +  sectioncounter>.", and the "subsection" counter will be counted for each h2 element with "sectioncounter.subsectioncounter":</p>
+
+    <!--Example
+body {
+  counter-reset: section;
+}
+
+h1 {
+  counter-reset: subsection;
+}
+
+h1::before {
+  counter-increment: section;
+  content: "Section " counter(section) ". ";
+}
+
+h2::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+}-->
+
+    <h2>The CSS counters() Function</h2>
+    <p>The counters() function returns the current values of the named and nested counters, as a string.</p>
+    <p>Here we use the counters() function to insert a string between different levels of nested counters:</p>
+
+    <!--Example
+ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: section;
+  content: counters(section,".") " ";
+}-->
+
+    <h2>CSS Counter Properties</h2>
+
+<!--Property	    Description
+
+content	            Used with the ::before and ::after pseudo-elements, to insert generated content
+counter-increment	Increments one or more counter values
+counter-reset	    Creates or resets one or more counters
+counter()	    Returns the current value of the named counter
+counters()	    Returns the current values of the named and nested counters-->
+
+
+
+
+
+
+
+</body>
+</html>

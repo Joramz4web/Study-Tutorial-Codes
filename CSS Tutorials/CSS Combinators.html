@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators</title>
+</head>
+<body>
+    <h1>CSS Combinators</h1>
+<p>A combinator is something that defines the relationship between two or more selectors.</p>
+
+<p>A CSS selector can contain more than one selector. Between the selectors, we can include a combinator, to create a more specific selection.</p>
+<p>There are four different combinators in CSS:</p>
+
+<ul>
+    <li>Descendant combinator (space)</li>
+    <li>Child combinator (>)</li>
+    <li>Next sibling combinator (+)</li>
+    <li>Subsequent-sibling combinator (~)</li>
+</ul>
+
+    <h2>Descendant Combinator (space)</h2>
+
+    <pre>
+        The descendant combinator matches all elements that are descendants (children, grandchildren, etc.) of a specified element.
+
+        The following example selects all p elements inside div elements: 
+    </pre>
+
+    <!--Example
+div p {
+  background-color: yellow;
+}-->
+
+    <h2>Child Combinator (>)</h2>
+    <pre>
+        The child combinator selects all elements that are direct children of a specified element.
+
+        The following example selects all p elements that are direct children of div:
+    </pre>
+
+    <!--Example
+div > p {
+  background-color: yellow;
+}-->
+
+    <h2>Next Sibling Combinator (+)</h2>
+    <pre>
+        The next sibling combinator is used to select an element that is directly after a specific element.
+
+        Sibling elements must have the same parent element.
+
+        The following example selects the first p element that immediately follows a div, and share the same parent:
+    </pre>
+    <!--Example
+div + p {
+  background-color: yellow;
+}-->
+
+    <h2>Subsequent-sibling Combinator (~)</h2>
+    <p>The subsequent-sibling combinator selects all elements that are next siblings of a specified element.</p>
+
+    <p>The following example selects all <p> elements that are next siblings of div, and share the same parent: </p>
+
+    <!--Example
+div ~ p {
+  background-color: yellow;
+}-->
+
+
+</body>
+</html>

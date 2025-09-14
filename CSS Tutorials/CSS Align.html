@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Align</title>
+
+        <style>
+            .center {
+                margin: auto;
+                width: 50%;
+                border: 3px solid #73AD21;
+                padding: 10px;
+            }
+        </style>
+</head>
+<body>
+    <h1>CSS Horizontal & Vertical Align</h1>
+    <h2>CSS Centering Elements</h2>
+
+    <p>With CSS, you can center elements (horizontally, vertically, or both) with several methods, depending on the type of element.</p>
+
+    <h2>Center Align Block Elements</h2>
+
+    <!--Use margin: auto;, to horizontally center a block-level element (like <div>).-->
+    <p>Also specify a width for the element, to prevent it from stretching out to the edges of its container.</p>
+    <p>Note: Center aligning has no effect on block-level elements if the width property is not set (or set to 100%).</p>
+    <p>Below, the div element is centered and has a width of 50% (and the remaining space will be split equally between the left and right margins):</p>
+
+    <h2>Center Align Block Elements</h2>
+    <p>Use margin: auto to horizontally center a block-level element:</p>
+
+        <div class="center">
+            <p>I am centered!</p>
+        </div>
+
+    <h2>Center Align Text</h2>
+    <p>To center the text inside a block-level element, use text-align: center;.</p>
+
+    <!--Example
+p {
+  text-align: center;
+}
+  Tip: For more examples on how to align text, see the CSS Text chapter.
+  
+  Center Align an Image
+  To center an image, set margin-left and margin-right to auto, and also turn the image into a block element:
+  
+  Example
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}-->
+
+        <h2>Center Align with Flexbox</h2>
+
+    <p>With CSS flexbox you can center elements, both horizontally and vertically, within a flex container.</p>
+    <p>A flex container with both the justify-content and the align-items properties set to center will align the item(s) in the center (in both axis):</p>
+
+    <!--Example
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}-->
+
+        <h2>Center Align with Grid</h2>
+    <p>With CSS grid you can center elements, both horizontally and vertically, within a grid container.</p>
+    <p>A grid container with the place-items property set to center, will align the item(s) in the center (in both axis).</p>
+
+    <!--Example
+.center {
+  display: grid;
+  place-items: center;
+  height: 200px;
+  border: 3px solid green;
+}-->
+
+        <h2>Left and Right Align - Using position</h2>
+    <p>Another method for aligning elements is to use position: absolute;:
+
+    Note: Absolute positioned elements are removed from the normal flow, and can overlap other elements.</p>
+
+    <!--Example
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  border: 3px solid green;
+  padding: 10px;
+}-->
+
+    <h2>Left and Right Align - Using float</h2>
+    <p>Another method for aligning an element to the left or right, is to use the float property:</p>
+
+    <!--Example
+.right {
+  float: right;
+  width: 300px;
+  border: 3px solid green;
+  padding: 10px;
+}-->
+
+        <h2>Center Align with position and transform</h2>
+
+    <p>If you deal with elements of unknown or dynamic dimensions, it is a common technique to use position: absolute; combined with transform: translate(); to center an element:</p>
+
+    <!--Example
+.container p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}-->
+
+
+</body>
+</html>

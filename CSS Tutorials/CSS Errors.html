@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Errors</title>
+</head>
+<body>
+    <h1>CSS Errors</h1>
+    <p>Errors in CSS can lead to unexpected behavior or styles not being applied correctly. This page shows common CSS mistakes and how to avoid them.</p>
+
+    <h2>Missing Semicolons</h2>
+    <p>Forgetting a semicolon at the end of a property declaration can break the style rule.</p>
+
+    <!--Example
+    .bad {
+    color: red
+    background-color: yellow;
+    }-->
+
+    <h2>Invalid Property Names</h2>
+    <p>Using a property name that does not exist will simply be ignored by the browser.</p>
+
+    <!--Example
+    .bad {
+    colr: blue;
+    font-size: 16px;
+    }-->
+
+    <h2>Invalid Values</h2>
+    <p>Correct properties but invalid values will also be ignored.</p>
+    <!--Example
+    .bad {
+    width: -100px;
+    color: green;
+    }-->
+
+    <h2>Unclosed Braces</h2>
+    <p>If you forget to close a brace }, the entire rule may be ignored.</p>
+    <!--Example
+    .bad {
+    padding: 20px;
+    margin: 10px;-->
+
+    <h2>Extra Colons or Braces</h2>
+    <p>Typos like extra colons or misplaced braces can cause rules to break.</p>
+    <!--Example
+    .bad {
+    color:: blue;
+    }-->
+
+    <h3>Tips to Avoid CSS Errors</h3>
+    <ul>
+        <li>Use a code editor with syntax highlighting.</li>
+        <li>Validate your CSS with a CSS linter or validator.</li>
+        <li>Write CSS in small sections and test frequently.</li>
+    </ul>
+
+</body>
+</html>

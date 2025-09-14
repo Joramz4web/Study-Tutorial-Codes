@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display</title>
+
+    <style>
+        #panel, .flip {
+            padding: 10px;
+            text-align: center;
+            background-color: #04AA6D;
+            color: white;
+            border: solid 1px #a6d8a8;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        #panel {
+            display: none;
+        }
+
+        /*Using CSS and JavaScript to toggle between show and hide*/
+
+        #panel2, .flip2 {
+            padding: 10px;
+            text-align: center;
+            background-color: #04AA6D;
+            color: white;
+            border: solid 1px #a6d8a8;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        #panel2 {
+            display: none;
+            cursor: pointer;
+        }
+
+        /*Hide an Element - Use display:none or visibility:hidden?*/
+        .imgbox {
+            float: left;
+            text-align: center;
+            width: 120px;
+            border: 1px solid gray;
+            margin: 4px;
+            padding: 6px;
+        }
+
+        button {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>CSS The display Property</h1>
+
+<p>The display property is an important CSS property for controlling layout. It specifies whether an HTML element is treated as a block or an inline element.</p>
+<p>Every HTML element has a default display value, depending on what type of element it is. The default display value for most elements is block or inline.</p>
+<p>The display property is used to change the default display behavior of HTML elements.</p>
+
+
+    <h2>Block-level Elements</h2>
+    <p>A block-level element ALWAYS starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
+
+   <!--The <div> element is a block-level element.-->>
+    <p>Examples of block-level elements:</p>
+
+    <!--<ul>
+        <li><div></li>
+        <li><h1> - <h6></li>
+        <li><p></li>
+        <li><form></li>
+        <li><header></li>
+        <li><footer></li>
+        <li><section></li>
+    </ul>-->
+    
+    <h2>Inline Elements</h2>
+<p>An inline element DOES NOT start on a new line and only takes up as much width as necessary.</p>
+
+<p>This is an inline span element inside a paragraph.</p>
+<p>Examples of inline elements:</p>
+
+<ul>
+    <li>span</li> <!--<span> span element-->
+    <li>a</li> <!--<a> link element-->
+    <li>img</li> <!--<img> image element-->
+</ul>
+
+<h2>Common display Values</h2>
+<p>The CSS display property has many values. The following table lists the most commonly used:</p>
+
+<img src="CSS img/display elements.png">
+
+<h2>CSS display: none;</h2>
+<p>When using display: none; the element is completely hidden from the document flow and does not take up any space.</p>
+
+<p>It is commonly used with JavaScript to hide or show elements without deleting and recreating them.</p>
+
+<!--Example:
+How to use CSS and JavaScript to show a hidden element on a click event:-->
+
+    <p class="flip" onclick="myFunction()">click to show panel</p>
+
+    <div id="panel">
+         <p>This panel contains a div element, which is hidden by default (display: none).</p>
+         <p>We use JavaScript to show it (display: block).</p>
+         <p>How it works: When the user clicks on the p element, a function called myFunction() is executed, which changes the style of the div with id="panel" from display:none (hidden) to display:block (visible).</p>
+         <p>You will learn more about JavaScript in our JavaScript Tutorial.</p>
+    </div>
+
+    <!--Apply a Javascript-->
+    <script>
+        function myFunction() {
+            document.getElementById("panel").style.display = "block";
+        }
+    </script>
+
+
+<!--Using CSS and JavaScript to toggle between show and hide-->
+
+    <p>How to use CSS and JavaScript to toggle between show and hide on a click event:</p>
+    <!--Example:-->
+
+    <p class="flip2" onclick="myFunction()">Click to Show/Hide Panel</p>
+
+    <div class="panel2">
+        <p>The panel toggles between hiding and showing a div element.</p>
+        <p>W use JavaScript to open and close it.</p>
+        <p>You will learn more about JavaScript in our JavaScript Tutorial.</p>
+    </div>
+
+    <!--Apply the JavaScript
+   <script>
+        function myFunction() {
+        var x = document.getElementById("panel2");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        }
+    </script>-->
+
+    <h2>Override the Default Display Value</h2>
+    <p>The display property is used to change the default display behavior of HTML elements.</p>
+    <p>Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.</p>
+
+    <!--A common example is to change <li> elements to inline, to create a horizontal menu:
+        
+        Example
+    li {
+    display: inline;
+    }
+    
+    Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.-->
+
+    <p>The following example displays span elements as block elements:</p>
+    <!--Example
+span {
+  display: block;
+}
+  
+
+The following example displays <a> elements as block elements:
+
+Example
+a {
+  display: block;
+}-->
+
+    <h2>Example of More Display Values</h2>
+    <p>The following example demonstrates some more display values:</p>
+
+    <!--Example
+p.ex1 {display: none;}
+p.ex2 {display: inline;}
+p.ex3 {display: block;}
+p.ex4 {display: inline-block;}
+p.ex5 {display: flex;}
+p.ex6 {display: grid;}-->
+
+
+<!--Hide an Element - Use display:none or visibility:hidden?-->
+
+    <h2>Hide an Element - Use display:none or visibility:hidden?</h2>
+
+    <p><strong>visibility:hidden</strong> hides the element, but it still takes up space in the layout.</p>
+    <p><strong>display:none</strong> removes the element from the document. It does not take up any space.</p>
+
+    <div class="imgbox" id="imgbox1">Box 1<br>
+        <img src="css display-img/css-dispaly1.jpg" alt="Coffee cup" style="width: 100%;">
+        <button onclick="removeElement()">Remove</button>
+    </div>
+
+    <div class="imgbox" id="imgbox2">Box 2<br>
+        <img src="css display-img/css-display2.jpg" alt="Lady with fruits" style="width: 100%;">
+        <button onclick="changeVisibility()">Hide</button>
+    </div>
+
+    <div class="imgbox" id="imgbox3"> Box 3<br>
+        <img src="css display-img/css-display3.jpg" alt="Man sitting in suits" style="width: 100%;">
+        <button onclick="resetElement()">Reset</button>
+    </div>
+
+    <!--Apply the JavaScript-->
+    
+    <script>
+        function removeElement() {
+            document.getElementById("imgbox1").style.display = "none";
+        }
+
+        function changeVisibility() {
+            document.getElementById("imgbox2").style.visibility= "hidden";
+        }
+
+        function resetElement() {
+            document.getElementById("imgbox1").style.display = "block";
+            document.getElementById("imgbox2").style.visibility = "visible";
+        }
+    </script>
+
+    <p>Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:</p>
+
+    <!--Example
+h1.hidden {
+  display: none;
+}-->
+
+<p>You can also use visibility:hidden; to hide an element.</p>
+<p>However, with this property, the element will be hidden, but it will still take up the same space as if it was visible:</p>
+
+<!--Example
+h1.hidden {
+  visibility: hidden;
+}-->
+
+    <h2>CSS Display/Visibility Properties</h2>
+
+    <!--Property	Description
+display	Specifies how an element should be displayed
+visibility	Specifies whether or not an element should be visible-->
+
+
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+</head>
+<body>
+    <h1>CSS Specificity</h1>
+
+    <p>CSS specificity is an algorithm that determines which style declaration is ultimately applied to an element.</p>
+    <p>If two or more CSS rules point to the same element, the declaration with the highest specificity will "win", and that style will be applied to the HTML element.</p>
+    <p>Look at the following examples:</p>
+
+    <!--Example
+Here, we have specified a red color for <p> elements. Result: The text will be red:
+
+<html>
+<head>
+  <style>
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p>Hello World!</p>
+
+</body>
+</html>
+
+Now, look at next example:
+
+Example
+Here, we have added a class selector (named "test"), and specified a green color for this class. Result: The text will be green, because the class selector has higher specificity:
+
+<html>
+<head>
+  <style>
+    .test {color: green;}
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p class="test">Hello World!</p>
+
+</body>
+</html>
+
+*****************************************************
+
+Now, look at next example:
+
+Example
+Here, we have added an inline style for the <p> element. Result: The text will be pink, because the inline style has the highest specificity:
+
+<html>
+<head>
+  <style>
+    #demo {color: blue;}
+    .test {color: green;}
+    p {color: red;}
+  </style>
+</head>
+<body>
+
+<p id="demo" class="test" style="color: pink;">Hello World!</p>
+
+</body>
+</html>-->
+
+    <h2>CSS Specificity Hierarchy</h2>
+
+    <p>Each type of CSS selector has a position in the specificity hierarchy, and the selector types carry different "weights".</p>
+
+    <img src="CSS Img/CSS Specificity Hierarchy.png" width="700" height="auto">
+
+
+    <!--Example
+The specificity hierarchy and weight:
+
+<html>
+<head>
+  <style>
+    #demo {color: blue;} /* weight: 1-0-0 */
+    p#demo {color: orange;} /* weight: 1-0-1 WINS! */
+    .test {color: green;} /* weight: 0-1-0 */
+    p.test {color: green;} /* weight: 0-1-1 */
+    p {color: red;} /* weight: 0-0-1 */
+  </style>
+</head>
+<body>
+
+<p id="demo" class="test">Hello World!</p>
+
+</body>
+</html>-->
+
+    <h2>More Specificity Examples</h2>
+    <p>Equal specificity: the latest rule wins</p>
+    <p>If the same rule is written twice in the external style sheet, the latest rule wins:</p>
+
+    <!--Example
+h1 {background-color: yellow;}
+h1 {background-color: red;}-->
+
+    <h1>ID selectors beats attribute selectors</h1>
+    <p>Look at the following code lines - Here, the first rule has higher specificity than the second, and will therefore be applied:</p>
+
+    <!--Example
+#myDiv {background-color: yellow;}
+div[id=myDiv] {background-color: blue;}-->
+
+    <h2>A class selector beats element selectors</h2>
+    <p>A class selector such as .intro beats h1, p, div, etc:</p>
+
+    <!--Example
+.intro {background-color: yellow;}
+h1 {background-color: red;}-->
+
+    <h2>The universal selector (*)</h2>
+    <p>The universal selector (*) has no specificity weight value:</p>
+
+    <!--Example
+* {background-color: yellow;}
+h1 {background-color: red;}-->
+
+    <h2>Inline style sheet are more specific than external style sheet</h2>
+
+    <p>The embedded style sheet is closer to the element to be styled. So in the following situation the last rule will be applied:</p>
+
+    <!--Example
+/*From external CSS file:*/
+#content h1 {background-color: red;}
+
+/*In HTML file:*/
+<style>
+#content h1 {background-color: yellow;}
+</style>-->
+
+</body>
+</html>

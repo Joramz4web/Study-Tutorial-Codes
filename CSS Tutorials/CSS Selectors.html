@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+
+    <style>
+        p 
+        {
+            text-align: center;
+            color: red;
+        }
+        #paral /*CSS id selector-contains the # before the selector*/
+        {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors</h1>
+    <h2>CSS Selectors</h2>
+
+    <pre>
+        CSS selectors are used to "find" (or select) the HTML elements you want to style.
+        We can divide CSS selectors into five categories:
+    </pre>
+
+    <ul>
+        <li>Simple selectors (select elements based on name, id, class)</li>
+        <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+        <li>Pseudo-class selectors (select elements based on a certain state)</li>
+        <li>Pseudo-elements selectors (select and style a part of an element)</li>
+        <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+    </ul>
+
+    <h3>This page will explain the most basic CSS selectors.</h3>
+    <h4>The CSS element Selector</h4>
+    <p>The element selector selects HTML elements based on the element name.</p>
+
+    <!--Example
+    Here, all <p> elements on the page will be center-aligned, with a red text color: -->
+        <p>Every paragraph will be affected by the style.</p>
+        <p id="paral">Me too!</p> <!--Note: An id name cannot start with a number!-->
+        <p>And me!</p>
+
+        <h2>The CSS id Selector</h2>
+        <pre>
+            The id selector uses the id attribute of an HTML element to select a specific element.
+            The id of an element is unique within a page, so the id selector is used to select one unique element!
+            To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+        </pre>
+
+        <h2>The CSS class Selector</h2>
+        <pre>
+            The class selector selects HTML elements with a specific class attribute.
+            To select elements with a specific class, write a period (.) character, followed by the class name.
+        </pre>
+
+        <!--Example
+    In this example all HTML elements with class="center" will be red and center-aligned: 
+
+        .center {
+        text-align: center;
+        color: red;
+        }-->
+
+        <p>You can also specify that only specific HTML elements should be affected by a class.</p>
+        <!--Example
+        In this example only <p> elements with class="center" will be red and center-aligned: 
+
+        p.center {
+        text-align: center;
+        color: red;
+        }
+        NOTE:HTML elements can also refer to more than one class.
+        
+        Example
+    In this example the <p> element will be styled according to class="center" and to class="large": 
+
+    <p class="center large">This paragraph refers to two classes.</p> Note: A class name cannot start with a number!-->
+
+    <h2>The CSS Universal Selector</h2>
+    <p>The universal selector (*) selects all HTML elements on the page.</p>
+
+    <!--Example
+    The CSS rule below will affect every HTML element on the page: 
+
+    * {
+    text-align: center;
+    color: blue;
+    }-->
+
+    <h2>The CSS Grouping Selector</h2>
+    <pre>
+        The grouping selector selects all the HTML elements with the same style definitions.
+        Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+    </pre>
+
+        <!--h1 {
+    text-align: center;
+    color: red;
+    }
+
+    h2 {
+    text-align: center;
+    color: red;
+    }
+
+    p {
+    text-align: center;
+    color: red;
+    }-->
+
+    <pre>
+        It will be better to group the selectors, to minimize the code.
+        To group selectors, separate each selector with a comma.
+    </pre>
+
+    <!--Example
+    In this example we have grouped the selectors from the code above: 
+
+    h1, h2, p {
+    text-align: center;
+    color: red;
+    }-->
+
+    <h1>All CSS Simple Selectors</h1>
+    <img src="CSS img/Selectors explained.png" alt="selectors" style="width: auto; height: auto;">
+
+
+
+</body>
+</html>

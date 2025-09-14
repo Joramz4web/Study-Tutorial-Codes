@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Max-width</title>
+
+        <style>
+            div.ex1 {
+                width: 500px;
+                margin: auto;
+                border: 3px solid #73AD21;
+            }
+
+            div.ex2 {
+                max-width: 500px;
+                margin: auto;
+                border: 3px solid #73AD21;
+            }
+        </style>
+</head>
+<body>
+         <h1>CSS The max-width Property</h1>
+    <p>The max-width property defines the maximum width of an element.</p>
+
+    <p>This property prevents the element's width from being larger than the specified value (it can be smaller, but not larger).</p>
+
+    <p>This property is useful for creating responsive layouts and to ensure content readability across various screen sizes.</p>
+
+    <h2>Problem with width:</h2>
+    <p>Here we have a horizontally centered <div> element with a specific width (600px):</p>
+
+        <h2>Using max-width instead:</h2>
+    <p>Now, we use the max-width property instead. This will improve the browser's handling of small windows:</p>
+
+    <!--Tip: Resize the browser window to less than 600px wide, to see the difference between the two <div>s! 
+Here is the CSS code for the two <div>s above:-->
+
+    <div class="ex1">This div element has a width: 500px;</div>
+    <br>
+    <div class="ex2">This div element has a max-width: 500px;</div>
+
+    <p><strong>Tip:</strong> Drag the browser window to smaller than 500px wide, to see the difference between the two divs!</p>
+
+    <h1>CSS Properties</h1>
+
+    <!--Property	Description
+max-width	Defines the maximum width of an element
+width	Sets the width of an element-->
+
+
+</body>
+</html>

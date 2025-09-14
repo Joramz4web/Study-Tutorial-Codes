@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Website Layout</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background-color: #f1f1f1;
+                padding: 10px;
+                text-align: center;
+            }
+
+            /* Style the topnav */
+            ul.topnav {
+                display: flex;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: #333333;
+            }
+
+            /* Style links in topnav */
+            ul.topnav li a {
+                display: block;
+                color: #f1f1f1;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            /* Change color on hover */
+            ul.topnav li a:hover {
+                background-color: #dddddd;
+                color: black;
+            }
+
+            div.flex-container {
+                display: flex;
+                flex-direction: row;
+            }
+
+            div.flex-container > div {
+                margin: 10px;
+            }
+
+            /* Use media query and show the flex items vertically if screen width is less than 600px */
+            @media screen and (max-width: 600px) {
+                div.flex-container {
+                    flex-direction: column;
+                }
+            }
+        </style>
+
+</head>
+<body>
+    <h1>CSS Website Layout</h1>
+
+    <p>A website is often divided into multiple sections, like a top header, navigation menu, main content, and a footer:</p>
+    <p>There are tons of different layout designs to choose from. However, the structure above, is one of the most common, and we will take a closer look at it in this tutorial.</p>
+
+    <h2>CSS Header</h2>
+    <p>A header is usually located at the top of the website, and often contains a logo or the website name:</p>
+
+    <!--Example
+header {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+}-->
+
+    <h2>CSS Navigation Bar</h2>
+
+    <p>A navigation bar contains a list of links to help visitors navigate through your website:</p>
+
+    <header>
+        <h1>My header</h1>
+    </header>
+
+    <ul class="topnav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+    <div class="flex-container">
+        <div>
+            <h2>Side</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.</p>
+        </div>
+
+        <div>
+            <h2>Main Content</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+        
+    <h2>Side</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique.</p>
+  </div>  
+</div>
+
+
+    <h2>CSS Layout Content</h2>
+    
+    <p>How the content of a website should be shown, often depends on the device of the users. The most common layouts are:</p>
+
+    <ul>
+        <li><b>1-column layout </b> (often used for mobile browsers)</li>
+        <li><b>2-columns layout </b> (often used for tablets and laptops)</li>
+        <li><b>3-columns layout</b> (only used for desktops)</li>
+    </ul>
+        
+    <img src="CSS Img/weblayoutspng.png">
+    <p>Here we will create a 3-column layout, and change it to a 1-column layout when the width of the screen is less than 600px:</p>
+
+    <h2>CSS Basic and Fixed Footer</h2>
+
+    <p>The footer is placed at the bottom of a webpage. It often contains information like copyright and contact info.</p>
+    <p>The following example shows a basic footer styling:</p>
+
+    <!--Example
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 8px;
+}-->
+
+  <p>The following example shows a fixed footer that is always visible at the bottom of the page, regardless of scrolling:</p>
+
+  <!--Example
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 8px;
+  text-align: center;
+  z-index: 1000;
+}-->
+
+    <h2>CSS Responsive Website</h2>
+
+    <p>In this example, we use media queries together with flexbox to create a responsive website, containing a flexible navigation bar and flexible content.</p>
+
+    <!--<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header */
+header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+/* Navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<! Note 
+ <div style="background:yellow;padding:5px;text-align:center;">
+  <h4>Resize the browser window to see the responsive effect.</h4>
+</div>
+-->
+
+<!-- Header 
+ <header>
+  <h1>My Website</h1>
+  <p>With a <b>flexible</b> layout.</p>
+</header>
+
+ Navigation Bar<div class="navbar">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+--> 
+
+
+<!-- The flexible grid (content) 
+ 
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>-->
+
+
+<!-- Footer 
+ 
+<footer>
+  <h2>Footer</h2>
+</footer>
+
+</body>
+</html>-->
+
+
+
+</body>
+</html>

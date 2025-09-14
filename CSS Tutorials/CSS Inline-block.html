@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Inline-block</title>
+
+        <style>
+            .nav {
+                background-color: lightgray;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav li {
+                display: inline-block;
+                font-size: 18px;
+                padding: 15px;
+            }
+        </style>
+
+</head>
+<body>
+    <h1>CSS display: inline-block</h1>
+<p>The display: inline-block property combines the features of both inline and block elements.</p>
+
+<p>An element with display: inline-block will appear on the same line as other inline or inline-block elements. In addition, you can set the width, height, margin-top, and margin-bottom properties for the element (like block elements).</p>
+
+<p>The following example shows the different behavior of display: inline, display: inline-block and display: block:</p>
+
+<!--Example:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+span.a {
+  display: inline; /* the default for span */
+  padding: 5px;
+  border: 2px solid red;  
+}
+
+span.b {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid red;    
+}
+
+span.c {
+  display: block;
+  width: 100px;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid red;    
+}
+</style>
+</head>
+<body>
+
+<h1>The display Property</h1>
+
+<h2>display: inline</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>display: inline-block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>display: block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+</body>
+</html>-->
+
+    <h2>Create a Horizontal Navigation Menu</h2>
+
+    <p>A common use for display: inline-block is to display list items horizontally instead of vertically. The following example creates a horizontal navigation menu:</p>
+
+    <!--Example
+Create a horizontal navigation menu:-->
+
+    <p>List items are displayed vertically by default. Here, we use display: inline-block to display them horizontally (side by side).</p>
+
+    <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Clients</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+
+</body>
+</html>

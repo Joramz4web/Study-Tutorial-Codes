@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Performance Optimization</title>
+</head>
+<body>
+    <h1>CSS Performance Optimization</h1>
+    <p>Optimizing CSS</p>
+
+    <p>Optimizing CSS makes your website load faster and run more smoothly; which also results in a better user experience.</p>
+    <p>Here are some tips for optimizing CSS:</p>
+
+    <h2>1. Use Simple Selectors</h2>
+    <p>Use simple selectors when possible. Complex selectors increase the parsing time.</p>
+
+    <!--Better Example
+.button:hover {
+  background-color: blue;
+}-->
+
+    <h2>2. Avoid Universal Selector for Styling</h2>
+    <p>Avoid the universal selector (*) when not strictly necessary. The universal selector (*) affects every element and can slow down page rendering.</p>
+
+    <!--Example
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}-->
+
+    <h2>3. Avoid Inline Styles</h2>
+    <p>Avoid inline styles when not necessary. Inline styles make your HTML heavier and are harder to manage.</p>
+
+    <!--Bad Example
+<div style="color: red; font-size: 18px;">Hello</div>
+<p style="color: blue; font-size: 16px;">Test</p>-->
+
+    <h2>4. Avoid @import</h2>
+    <p>Avoid using @import for loading external CSS, as it delays stylesheet loading.</p>
+    <p>Add external CSS with the link tag in the head section, so it loads before the page is rendered.</p>
+    <!--Example
+<link rel="stylesheet" href="style.css">-->
+
+    <h2>5. Use Shorthand Properties</h2>
+    <p>Use shorthand properties when possible. It saves space and is faster to parse.</p>
+
+    <!--Example
+/* Long version */
+margin-top: 10px;
+margin-right: 20px;
+margin-bottom: 10px;
+margin-left: 20px;
+
+/* Shorthand version */
+margin: 10px 20px;-->
+
+    <h2>6. Cut Down Unnecessary Animations</h2>
+
+    <p>A high number of animations and large animations require more processing power to handle, which degrades performance. So, remove unnecessary animations.</p>
+
+    <h2>7. Use Properties that Not Cause Repaint of Animations</h2>
+    <p>Animation performance relies also on what properties you are animating.</p>
+    <p>Some properties (like width, height, left, top), trigger a layout recalculation when animated, and should be avoided.</p>
+    <p>If possible, use animation properties that do not cause repaint, like transforms, opacity and filter.</p>
+
+        <h2>8. Combine and Minify CSS</h2>
+    
+    <p>Use one CSS file when possible, and remove spaces and comments to reduce file size.</p>
+    <p>You can use tools like:
+        <ul>
+            <li>CSS Minifier</li>
+            <li>PostCSS</li>
+            <li>Online compressors</li>
+        </ul>
+    </p>
+
+        <h2>9. Cache Your CSS</h2>
+
+    <p>Make sure your CSS file is cached by the browser by giving it a long expiration time in your server settings. This reduces how often users need to re-load it.</p>
+
+        <h2>Summary</h2>
+    <ul>
+        <li>Keep selectors short and simple</li>
+        <li>Avoid layout-thrashing operations</li>
+        <li>Use efficient animation techniques</li>
+        <li>Use external, minified, and cached stylesheets</li>
+    </ul>
+
+
+
+
+
+
+
+</body>
+</html>
